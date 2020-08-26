@@ -35,7 +35,7 @@ body{
 
 section{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
 }
@@ -97,9 +97,7 @@ section#home .container{
 /* ABOUT */
 
 section#about {
-    margin-top: 150px ;
-    width: 100%;
-    display: flex;
+    margin-top: 150px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -112,10 +110,10 @@ section#about img {
 }
 
 section#about div.container {
-    margin: 0 8px 0 8px;
+    width: 90%;
 }
 
-section#about p#subtitle {
+section#about p.subtitle {
     font-size: 12px;
     color: #666666;
     margin: 0 0 16px;
@@ -131,20 +129,20 @@ section#about div.divider {
     height: 2.5px;
 }
 
-section#about h2#title {
+section#about h2.title {
     font-size: 25px;
     color: #151515;
     margin: 0 0 16px;
 }
 
-section#about p#text {
+section#about p.text {
     font-size: 17px;
     color: #666666;
     margin: 0 0 24px;
     font-weight: 300;
 }
 
-section#about button#button {
+section#about button.button {
     background: #FFA949;
     color: #FFF;
     font-size: 17px;
@@ -155,6 +153,7 @@ section#about button#button {
     width: 150px;
 }
 
+<<<<<<< HEAD
 /* GALLERY */
 
 section#gallery .container{
@@ -224,3 +223,86 @@ section#gallery .container .itens-filter p{
 }
 
 
+=======
+/* SERVICES */
+
+section#services {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 60px;
+
+}
+
+section#services h2.title {
+    font-size: 25px;
+    color: #151515;
+    margin: 15px 0;
+}
+
+section#services div.divider {
+    background: #FFA949;
+    margin: 4px 0 21px;
+    width: 85px;
+    height: 2.5px;
+}
+
+section#services div.container {
+    width: 90%;
+    box-sizing: border-box;
+}
+
+section#services div.service {
+    width: 100%;
+    height: 320px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 35px 15px;
+    border: 1px solid #e3e3e3;
+    margin: 25px 0;
+    transition: all .5s;
+}
+
+section#services div.service div.service-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background: #ffe5c7;
+    transition: all .5s;
+}
+
+section#services div.service div.service-icon svg{
+    width: 40px;
+    transition: all .5s;
+}
+
+section#services div.service h3.service-name {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+section#services div.service p.service-info {
+    font-size: 16px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+section#services div.service:hover {
+    box-shadow: 0px 0px 5px 2px #e3e3e3be;
+}
+
+section#services div.service:hover div.service-icon {
+    background: #fa9017;
+}
+
+section#services div.service:hover svg {
+    fill: white;
+}
+>>>>>>> cc88d0efeb6d6fa089b003a1c89ec3072375194e
