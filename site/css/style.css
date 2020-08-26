@@ -40,7 +40,7 @@ section{
     justify-content: center;
 }
 
-section.home .container{
+section#home .container{
     width: 92%;
     box-sizing: border-box;
     padding-top: 122px;
@@ -55,10 +55,10 @@ section.home .container{
 }
 
 .content-text p{
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    color: #646f87;
+    font-size: 17px;
+    color: #666666;
+    margin: 0 0 24px;
+    font-weight: 300;
     margin-top: 30px;
 }
 
@@ -72,7 +72,7 @@ section.home .container{
     line-height: 55px;
     color: white;
     border: 0;
-    margin-top: 40px;
+    margin-top: 30px;
     background: -webkit-linear-gradient(left,#fe8464 0%,#fe6e9a 50%,#fe8464 100%);
     background: -o-linear-gradient(left,#fe8464 0%,#fe6e9a 50%,#fe8464 100%);
     background: linear-gradient(to right,#fe8464 0%,#fe6e9a 50%,#fe8464 100%);
@@ -154,3 +154,73 @@ section#about button#button {
     border-radius: 5px;
     width: 150px;
 }
+
+/* GALLERY */
+
+section#gallery .container{
+    width: 92%;
+    box-sizing: border-box;
+    padding-top: 122px;
+}
+
+section#gallery .container h4{
+   font-weight: 100;
+   padding-bottom: 10px;
+   color: #f14836;
+}
+
+section#gallery .container .itens-filter{
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+section#gallery .container .itens-filter p{
+    color: #666666;
+    width: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.itens-gallery{
+    width: 100%;
+    height: 900px;
+    box-sizing: border-box;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.large{
+    width: 100%;
+    height: 58%;
+    background: #FFA949;
+    border-radius: 10px;
+}
+
+.small{
+    width: 100%;
+    height: 38%;
+    background: rgb(49, 197, 62);
+    border-radius: 10px;
+}
+
+
+.img-gallery{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
