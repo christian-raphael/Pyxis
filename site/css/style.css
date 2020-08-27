@@ -153,8 +153,6 @@ section#about button.button {
     width: 150px;
 }
 
-<<<<<<< HEAD
-=======
 /* PROJECT */
 
 section#project .container{
@@ -215,7 +213,6 @@ section#project .container .specific ul li p{
     margin: 0 0 0 20px;
 }
 
->>>>>>> b6393c420346e32edd1c9c3f7d594c77aa7ba505
 /* GALLERY */
 
 section#gallery .container{
@@ -395,7 +392,6 @@ section#team div.divider {
 section#team div.container {
     width: 92%;
 }
-<<<<<<< HEAD
 
 section#team div.member {
     width: 100%;
@@ -451,5 +447,3 @@ div.social-media svg {
     height: 100%;
     fill: #df011f;
 }
-=======
->>>>>>> b6393c420346e32edd1c9c3f7d594c77aa7ba505
