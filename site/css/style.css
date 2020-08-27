@@ -153,13 +153,73 @@ section#about button.button {
     width: 150px;
 }
 
-<<<<<<< HEAD
+/* PROJECT */
+
+section#project .container{
+    width: 92%;
+    height: auto;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+
+section#project .container img{
+    width: 100%;
+}
+
+section#project .container .subtitle {
+    font-size: 18px;
+    font-weight: 100;
+    color: #f94f4f;
+    margin-top: 40px;
+}
+
+section#project .container .title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+section#project .container p {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px;
+    color: #747e88;
+    margin-top: 36px;
+}
+
+section#project .container .specific {
+    width: 100%;
+    margin-top: 30px;
+}
+
+section#project .container .specific ul{
+    list-style-type: none;
+}
+
+section#project .container .specific ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+section#project .container .specific ul li i{
+    font-size: 30px;
+    color: #f94f4f;
+}
+
+section#project .container .specific ul li p{
+    margin: 0 0 0 20px;
+}
+
 /* GALLERY */
 
 section#gallery .container{
     width: 92%;
     box-sizing: border-box;
     padding-top: 122px;
+    height: auto;
 }
 
 section#gallery .container h4{
@@ -201,7 +261,7 @@ section#gallery .container .itens-filter p{
     justify-content: space-between;
 }
 
-.large{
+.big{
     width: 100%;
     height: 58%;
     background: #FFA949;
@@ -223,7 +283,6 @@ section#gallery .container .itens-filter p{
 }
 
 
-=======
 /* SERVICES */
 
 section#services {
@@ -305,4 +364,3 @@ section#services div.service:hover div.service-icon {
 section#services div.service:hover svg {
     fill: white;
 }
->>>>>>> cc88d0efeb6d6fa089b003a1c89ec3072375194e
