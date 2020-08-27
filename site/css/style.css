@@ -110,7 +110,7 @@ section#about img {
 }
 
 section#about div.container {
-    width: 90%;
+    width: 92%;
 }
 
 section#about p.subtitle {
@@ -153,7 +153,6 @@ section#about button.button {
     width: 150px;
 }
 
-<<<<<<< HEAD
 /* GALLERY */
 
 section#gallery .container{
@@ -223,7 +222,6 @@ section#gallery .container .itens-filter p{
 }
 
 
-=======
 /* SERVICES */
 
 section#services {
@@ -241,14 +239,14 @@ section#services h2.title {
 }
 
 section#services div.divider {
-    background: #FFA949;
+    background: #fa1750;
     margin: 4px 0 21px;
     width: 85px;
     height: 2.5px;
 }
 
 section#services div.container {
-    width: 90%;
+    width: 92%;
     box-sizing: border-box;
 }
 
@@ -274,12 +272,13 @@ section#services div.service div.service-icon {
     align-items: center;
     justify-content: center;
     border-radius: 100%;
-    background: #ffe5c7;
     transition: all .5s;
+    border: 1px solid #e3e3e3;
 }
 
 section#services div.service div.service-icon svg{
     width: 40px;
+    fill: #fa1750;
     transition: all .5s;
 }
 
@@ -299,10 +298,91 @@ section#services div.service:hover {
 }
 
 section#services div.service:hover div.service-icon {
-    background: #fa9017;
+    background: #fa1750;
 }
 
 section#services div.service:hover svg {
-    fill: white;
+    fill: white !important;
 }
->>>>>>> cc88d0efeb6d6fa089b003a1c89ec3072375194e
+
+/* TIME */
+
+section#team {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 60px;
+
+}
+
+section#team h2.title {
+    font-size: 25px;
+    color: #151515;
+    margin: 15px 0;
+}
+
+section#team div.divider {
+    background: #fa1750;
+    margin: 4px 0 21px;
+    width: 85px;
+    height: 2.5px;
+}
+
+section#team div.container {
+    width: 92%;
+}
+
+section#team div.member {
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 5px 2px #e3e3e3be;
+}
+
+section#team div.member img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+section#team div.member-info {
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    height: 200px;
+}
+
+div.member-info h3.member-name {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #151515;
+    margin-bottom: 8px;
+}
+
+div.member-info p.role {
+    margin-bottom: 15px;
+    color: #888888;
+}
+
+p.member-desc {
+    font-size: 16px;
+    color: #ABACAE;
+    margin-bottom: 20px;
+}
+
+div.member-info p.role, p.member-desc {
+    font-weight: 300;
+}
+
+div.social-media {
+    display: inline-block;
+    width: 18px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+div.social-media svg {
+    width: 100%;
+    height: 100%;
+    fill: #df011f;
+}
