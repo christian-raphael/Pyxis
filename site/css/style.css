@@ -435,15 +435,52 @@ div.member-info p.role, p.member-desc {
     font-weight: 300;
 }
 
-div.social-media {
+section#team div.social-media {
     display: inline-block;
-    width: 18px;
+    width: 20px;
     height: 20px;
     margin-right: 10px;
 }
 
-div.social-media svg {
-    width: 100%;
-    height: 100%;
+section#team div.social-media svg {
+    width: 20px;
+    height: 20px;
     fill: #df011f;
+}
+
+/* FOOTER */
+
+footer#footer {
+    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer#footer div.container {
+    width: 92%;
+}
+
+footer#footer div.container div {
+    background: white;
+    max-height: 200px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+footer#footer div h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+footer#footer p {
+    font-size: 16px;
+    color: #798795;
+    font-weight: 300;
+    display: block;
+    margin-top: 20px;
+}
+
+footer#footer div.info p {
+    
 }
