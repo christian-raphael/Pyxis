@@ -447,3 +447,78 @@ div.social-media svg {
     height: 100%;
     fill: #df011f;
 }
+
+/* CONTACT */
+
+section#contact .container{
+    width: 92%;
+    box-sizing: border-box;
+    padding-top: 122px;
+    height: auto;
+}
+
+section#contact .container img{
+    width: 100%;
+}
+
+section#contact .container .subtitle {
+    font-size: 18px;
+    font-weight: 100;
+    color: #f94f4f;
+    margin-top: 40px;
+}
+
+section#contact .container .title {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+section#contact .container p {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 24px;
+    color: #747e88;
+    margin: 20px 0;
+}
+
+
+section#contact .container input {
+    box-sizing: border-box;
+    padding: 0 25px;
+    border: 1px solid rgba(116,126,136,.2);
+    height: 50px;
+    border-radius: 5px;
+    width: 100%;
+    margin: 15px 0;
+}
+
+section#contact .container textarea {
+    box-sizing: border-box;
+    padding: 10px 25px;
+    border: 1px solid rgba(116,126,136,.2);
+    border-radius: 5px;
+    width: 100%;
+    margin: 15px 0;
+    resize: none;
+}
+
+section#contact .container button {
+    background-color: #f94f4f;
+    border-radius: 5px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 40px;
+    color: #fff;
+    border: 0;
+    margin: 15px 0;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+section#contact .container ::-webkit-input-placeholder {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
