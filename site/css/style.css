@@ -31,6 +31,37 @@ body{
     text-align: right;
     background: transparent;
     border: 0;
+    outline: none;
+}
+
+.menu{
+    width: 92%;
+    height: auto;
+    box-sizing: border-box;
+    position: fixed;
+    top: 80px;
+    left: 4%;
+    background-color: #fff;
+    box-shadow: 0 15px 20px 0 rgba(88,91,96,.1);
+    padding: 5px 12px;
+}
+
+.displaynone{
+    display: none;
+}
+
+.menu ul li{
+    list-style-type: none;
+}
+
+.menu ul li a{
+    font-size: 18px;
+    color: #585b60;
+    transition: all .3s;
+    position: relative;
+    text-decoration: none;
+    padding: 8px;
+    margin: 0;
 }
 
 section{
