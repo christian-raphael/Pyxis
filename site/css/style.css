@@ -1,9 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-}
-
-body{
+    --main-color: #FF2820;
+    --title-color: #363636;
+    --subtitle-color: #666666;
+    --text-color: #747e88;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -56,7 +57,7 @@ body{
 
 .menu ul li a{
     font-size: 18px;
-    color: #585b60;
+    color: var(--text-color);
     transition: all .3s;
     position: relative;
     text-decoration: none;
@@ -82,34 +83,15 @@ section#home .container{
     font-weight: 300;
     letter-spacing: 0.03rem;
     line-height: 1.5rem;
-    color: #363636;
+    color: var(--title-color);
 }
 
 .content-text p{
     font-size: 17px;
-    color: #666666;
+    color: var(--text-color);
     margin: 0 0 24px;
     font-weight: 300;
     margin-top: 30px;
-}
-
-.content-text button{
-    height: 55px;
-    width: 180px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 16px;
-    white-space: nowrap;
-    line-height: 55px;
-    color: white;
-    border: 0;
-    margin-top: 30px;
-    background: -webkit-linear-gradient(left,#fe8464 0%,#fe6e9a 50%,#fe8464 100%);
-    background: -o-linear-gradient(left,#fe8464 0%,#fe6e9a 50%,#fe8464 100%);
-    background: linear-gradient(to right,#fe8464 0%,#fe6e9a 50%,#fe8464 100%);
-    -webkit-box-shadow: 0 3px 6px 0 rgba(112,112,112,.44);
-    -moz-box-shadow: 0 3px 6px 0 rgba(112,112,112,.44);
-    box-shadow: 0 3px 6px 0 rgba(112,112,112,.44);
 }
 
 .img-home{
@@ -123,6 +105,39 @@ section#home .container{
 
 .img-home img{
     width: 100%;
+}
+
+p.subtitle {
+    font-size: 12px;
+    color: var(--subtitle-color);
+    margin: 0 0 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+div.divider {
+    background: var(--main-color);
+    margin: 4px 0 21px;
+    width: 85px;
+    height: 2.5px;
+}
+
+h2.title {
+    font-size: 25px;
+    color: var(--title-color);
+    margin: 0 0 16px;
+}
+
+button.button {
+    background: var(--main-color);
+    color: #FFF;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
 }
 
 /* ABOUT */
@@ -144,44 +159,11 @@ section#about div.container {
     width: 92%;
 }
 
-section#about p.subtitle {
-    font-size: 12px;
-    color: #666666;
-    margin: 0 0 16px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-weight: 500;
-}
-
-section#about div.divider {
-    background: #FFA949;
-    margin: 4px 0 21px;
-    width: 85px;
-    height: 2.5px;
-}
-
-section#about h2.title {
-    font-size: 25px;
-    color: #151515;
-    margin: 0 0 16px;
-}
-
 section#about p.text {
     font-size: 17px;
-    color: #666666;
+    color: var(--text-color);
     margin: 0 0 24px;
     font-weight: 300;
-}
-
-section#about button.button {
-    background: #FFA949;
-    color: #FFF;
-    font-size: 17px;
-    font-weight: bold;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    width: 150px;
 }
 
 /* PROJECT */
@@ -198,24 +180,11 @@ section#project .container img{
     width: 100%;
 }
 
-section#project .container .subtitle {
-    font-size: 18px;
-    font-weight: 100;
-    color: #f94f4f;
-    margin-top: 40px;
-}
-
-section#project .container .title {
-    font-size: 25px;
-    font-weight: 700;
-    margin-top: 16px;
-}
-
-section#project .container p {
+section#project .container p.text {
     font-size: 16px;
     font-weight: 100;
     line-height: 24px;
-    color: #747e88;
+    color: var(--text-color);
     margin-top: 36px;
 }
 
@@ -237,7 +206,7 @@ section#project .container .specific ul li{
 
 section#project .container .specific ul li i{
     font-size: 30px;
-    color: #f94f4f;
+    color: var(--main-color);
 }
 
 section#project .container .specific ul li p{
@@ -256,7 +225,7 @@ section#gallery .container{
 section#gallery .container h4{
    font-weight: 100;
    padding-bottom: 10px;
-   color: #f14836;
+   color: var(--main-color);
 }
 
 section#gallery .container .itens-filter{
@@ -270,7 +239,7 @@ section#gallery .container .itens-filter{
 }
 
 section#gallery .container .itens-filter p{
-    color: #666666;
+    color: var(--text-color);
     width: 100px;
     text-align: center;
     box-sizing: border-box;
@@ -295,14 +264,12 @@ section#gallery .container .itens-filter p{
 .big{
     width: 100%;
     height: 58%;
-    background: #FFA949;
     border-radius: 10px;
 }
 
 .small{
     width: 100%;
     height: 38%;
-    background: rgb(49, 197, 62);
     border-radius: 10px;
 }
 
@@ -322,19 +289,6 @@ section#services {
     justify-content: flex-start;
     margin-top: 60px;
 
-}
-
-section#services h2.title {
-    font-size: 25px;
-    color: #151515;
-    margin: 15px 0;
-}
-
-section#services div.divider {
-    background: #fa1750;
-    margin: 4px 0 21px;
-    width: 85px;
-    height: 2.5px;
 }
 
 section#services div.container {
@@ -370,7 +324,7 @@ section#services div.service div.service-icon {
 
 section#services div.service div.service-icon svg{
     width: 40px;
-    fill: #fa1750;
+    fill: var(--main-color);
     transition: all .5s;
 }
 
@@ -383,6 +337,7 @@ section#services div.service p.service-info {
     font-size: 16px;
     text-align: center;
     font-weight: lighter;
+    color: var(--text-color);
 }
 
 section#services div.service:hover {
@@ -390,7 +345,7 @@ section#services div.service:hover {
 }
 
 section#services div.service:hover div.service-icon {
-    background: #fa1750;
+    background: var(--main-color);
 }
 
 section#services div.service:hover svg {
@@ -405,19 +360,6 @@ section#team {
     justify-content: flex-start;
     margin-top: 60px;
 
-}
-
-section#team h2.title {
-    font-size: 25px;
-    color: #151515;
-    margin: 15px 0;
-}
-
-section#team div.divider {
-    background: #fa1750;
-    margin: 4px 0 21px;
-    width: 85px;
-    height: 2.5px;
 }
 
 section#team div.container {
@@ -447,18 +389,18 @@ div.member-info h3.member-name {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #151515;
+    color: var(--title-color);
     margin-bottom: 8px;
 }
 
 div.member-info p.role {
     margin-bottom: 15px;
-    color: #888888;
+    color: var(--subtitle-color);
 }
 
 p.member-desc {
     font-size: 16px;
-    color: #ABACAE;
+    color: var(--text-color);
     margin-bottom: 20px;
 }
 
@@ -476,7 +418,7 @@ section#team div.social-media {
 section#team div.social-media svg {
     width: 20px;
     height: 20px;
-    fill: #df011f;
+    fill: var(--main-color);
 }
     
 /* CONTACT */
@@ -490,29 +432,16 @@ section#contact .container{
 
 section#contact .container img{
     width: 100%;
+    margin-bottom: 20px;
 }
 
-section#contact .container .subtitle {
-    font-size: 18px;
-    font-weight: 100;
-    color: #f94f4f;
-    margin-top: 40px;
-}
-
-section#contact .container .title {
-    font-size: 25px;
-    font-weight: 700;
-    margin-top: 16px;
-}
-
-section#contact .container p {
+section#contact .container p.text {
     font-size: 16px;
     font-weight: 100;
     line-height: 24px;
-    color: #747e88;
+    color: var(--text-color);
     margin: 20px 0;
 }
-
 
 section#contact .container input {
     box-sizing: border-box;
@@ -526,7 +455,7 @@ section#contact .container input {
 
 section#contact .container textarea {
     box-sizing: border-box;
-    padding: 10px 25px;
+    padding: 15px 25px;
     border: 1px solid rgba(116,126,136,.2);
     border-radius: 5px;
     width: 100%;
@@ -534,24 +463,17 @@ section#contact .container textarea {
     resize: none;
 }
 
-section#contact .container button {
-    background-color: #f94f4f;
-    border-radius: 5px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 40px;
-    color: #fff;
-    border: 0;
-    margin: 15px 0;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+section#contact .container input:focus,
+section#contact .container textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    transition: all .2s;
 }
 
 section#contact .container ::-webkit-input-placeholder {
     font-size: 16px;
-    font-family: 'Roboto', sans-serif;
     font-weight: 100;
+    color: var(--text-color);
 }
 
 /* FOOTER */
@@ -579,7 +501,7 @@ footer#footer div.container div.contact {
 footer#footer div h3 {
     font-size: 18px;
     text-transform: uppercase;
-    color: #222222;
+    color: var(--title-color);
 }
 
 footer#footer li {
@@ -588,7 +510,7 @@ footer#footer li {
 
 footer#footer p, li a {
     font-size: 16px;
-    color: #798795;
+    color: var(--text-color);
     font-weight: 300;
     display: block;
     margin-top: 20px;
@@ -608,17 +530,17 @@ footer#footer div.social-media {
 }
 
 footer#footer div.social-media svg {
-    fill: #ff2820;
+    fill: var(--main-color);
 }
 
 div.copyright {
     padding: 20px 0;
     font-size: 16px;
-    color: #798795;
+    color: var(--text-color);
     font-weight: 300;
     text-align: center;
 }
 
 div.copyright span {
-    color: #fa1750;
+    color: var(--main-color);
 }
