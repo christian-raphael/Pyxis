@@ -122,16 +122,16 @@
             </div>
             <div class="gallery">
                 <div class="itens-gallery">
-                    <div class="big"><img src="img/gallery/protfolio-1.jpg" class="img-gallery"></div>
-                    <div class="small"><img src="img/gallery/protfolio-2.jpg" class="img-gallery"></div>
+                    <div class="big"><img src="img/gallery/portfolio-1.jpg" class="img-gallery" id="0"></div>
+                    <div class="small"><img src="img/gallery/portfolio-2.jpg" class="img-gallery" id="1"></div>
                 </div>
                 <div class="itens-gallery">
-                    <div class="small"><img src="img/gallery/protfolio-3.jpg" class="img-gallery"></div>
-                    <div class="big"><img src="img/gallery/protfolio-4.jpg" class="img-gallery"></div>
+                    <div class="small"><img src="img/gallery/portfolio-3.jpg" class="img-gallery" id="2"></div>
+                    <div class="big"><img src="img/gallery/portfolio-4.jpg" class="img-gallery" id="3"></div>
                 </div>
                 <div class="itens-gallery">
-                    <div class="big"><img src="img/gallery/protfolio-5.jpg" class="img-gallery"></div>
-                    <div class="small"><img src="img/gallery/protfolio-6.jpg" class="img-gallery"></div>
+                    <div class="big"><img src="img/gallery/portfolio-5.jpg" class="img-gallery" id="4"></div>
+                    <div class="small"><img src="img/gallery/portfolio-6.jpg" class="img-gallery" id="5"></div>
                 </div>
             </div>
         </div>
@@ -268,7 +268,20 @@
             </div>
         </div>
     </footer>
+    <div class="modal displaynone">
+        <div class="modal-area">
+            <div class="area">
+                <i class="large material-icons" id="close">close</i>
+                <img src="img/gallery/" id="in-modal">
+                <div class="navigate">
+                    <i class="large material-icons set" onclick="back()">navigate_before</i>
+                    <i class="large material-icons set" onclick="next()">navigate_next</i>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/menu.js"></script>
+    <script src="js/gallery.js"></script>
 </body>
 </html>
