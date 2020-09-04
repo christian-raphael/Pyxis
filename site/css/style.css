@@ -19,10 +19,12 @@ html {
     padding: 3% 4%;
     position: fixed;
     background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
-    float: left;
     height: 56px;
     display: flex;
     align-items: center;
@@ -30,7 +32,6 @@ html {
 }
 
 .btnMenu{
-    float: right;
     width: 56px;
     height: 56px;
     background: transparent;
