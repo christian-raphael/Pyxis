@@ -1,20 +1,16 @@
-
-
-let open = document.querySelector("#openMenu");
-let close = document.querySelector("#closeMenu");
 let menu = document.querySelector(".menu");
 
-function opnedMenu(){
-    menu.classList.remove('displaynone');
-    open.classList.add('displaynone');
-    close.classList.remove('displaynone');
+function displayMenu() {
+    menu.classList.toggle('displaynone');
 }
 
-function closedMenu(){
-    menu.classList.add('displaynone');
-    open.classList.remove('displaynone');
-    close.classList.add('displaynone');
-}
+var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
 
-open.addEventListener("click", opnedMenu);
-close.addEventListener("click", closedMenu);
+var hamburgers = document.querySelectorAll(".hamburger");
+if (hamburgers.length > 0) {
+    forEach(hamburgers, function (hamburger) {
+        hamburger.addEventListener("click", function () {
+            this.classList.toggle("is-active");
+        }, false);
+    });
+}
