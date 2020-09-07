@@ -191,6 +191,8 @@ section#project .container p.text {
     line-height: 1.5rem;
     color: var(--text-color);
     margin-top: 36px;
+    display: flex;
+    align-items: center;
 }
 
 section#project .container .specific {
@@ -219,6 +221,7 @@ section#project .container .specific ul li p{
 }
 
 /* GALLERY */
+
 section#gallery {
     height: auto;
 }
@@ -238,12 +241,20 @@ section#gallery .container .itens-filter{
     margin-bottom: 20px;
 }
 
+
 section#gallery .container .itens-filter p{
     color: var(--text-color);
     width: 100px;
     text-align: center;
     box-sizing: border-box;
     padding: 5px 0;
+}
+
+section#gallery .container .group-image{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery{
@@ -259,6 +270,7 @@ section#gallery .container .itens-filter p{
     border-radius: 10px;
     margin: 10px 0;
 }
+
 
 
 /* SERVICES */
