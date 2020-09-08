@@ -1,4 +1,49 @@
 @media(min-width: 992px) {
+    header.cabecalho div.container button.btnMenu {
+        display: none;
+    }
+
+    header.cabecalho div.container div.menu {
+        display: block;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    header.cabecalho div.container div.menu ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header.cabecalho div.container div.menu li {
+        margin: 0 0 0 10px;
+    }
+
+    div.menu li a {
+        font-size: 16px;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.menu li a:hover {
+        color: var(--main-color);
+    }
+
+    div.menu li a:after {
+        content: " ";        
+        height: 2px;
+        width: 0;
+        background: var(--main-color);
+        position: absolute;
+        bottom: 2px;
+        transition: width .2s;
+    }
+
+    div.menu li a:hover::after {
+        width: 70%;
+    }
+
     section#home{
         padding-top: 30px;
     }
@@ -116,5 +161,4 @@
     footer#footer div.social-media svg {
         width: 25px;
     }
-
 }
