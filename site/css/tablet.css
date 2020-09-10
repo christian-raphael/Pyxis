@@ -1,3 +1,10 @@
+@media(min-width: 371px){
+    .modal-area{
+        width: 332px;
+        height: fit-content;
+    }
+}
+
 @media(min-width: 575px){
     .cabecalho .container, .container, .menu{
         width: 80%;
@@ -82,7 +89,7 @@
     }
 
     .modal-area{
-        width: 35%;
+        width: 332px;
         height: fit-content;
     }
 }

@@ -536,6 +536,7 @@ div.copyright span {
 .displayFlex{
     display: flex;
 }
+
 .modal{
     position: fixed;
     top: 0;
@@ -548,7 +549,7 @@ div.copyright span {
 }
 
 .modal-area{
-    width: 92%;
+    width: 90%;
     height: 92%;
     background: transparent;
     display: flex;
