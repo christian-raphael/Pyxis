@@ -161,4 +161,9 @@
     footer#footer div.social-media svg {
         width: 25px;
     }
+
+    .modal-area{
+        width: 25%;
+        height: fit-content;
+    }
 }

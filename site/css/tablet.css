@@ -80,4 +80,9 @@
     section#project .container .specific ul li .text{
         display: flex;
     }
+
+    .modal-area{
+        width: 35%;
+        height: fit-content;
+    }
 }

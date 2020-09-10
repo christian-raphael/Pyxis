@@ -593,4 +593,10 @@ div.copyright span {
 .set{
     font-size: 40px;
     color: black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.set:hover{
+    color: var(--main-color);
 }
