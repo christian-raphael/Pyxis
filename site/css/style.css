@@ -571,6 +571,8 @@ div.copyright span {
 #in-modal{
     width: 100%;
     height: auto;
+    transition: 0.1s;
+    border-radius: 10px;
 }
 
 #close{
@@ -592,10 +594,13 @@ div.copyright span {
 }
 
 .set{
-    font-size: 40px;
+    font-size: 60px;
     color: black;
     cursor: pointer;
     transition: 0.1s;
+    color: var(--main-color);
+    padding: 0;
+    margin: 0;
 }
 
 .set:hover{
