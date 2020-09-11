@@ -26,6 +26,7 @@ img.logo {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+    z-index: 1;
 }
 
 .cabecalho .container{
@@ -546,6 +547,7 @@ div.copyright span {
     background: #000000be;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
 .modal-area{
@@ -605,4 +607,36 @@ div.copyright span {
 
 .set:hover{
     color: var(--main-color);
+}
+
+/* Animação */
+
+[data-anime] {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="botom"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-animation="modal"]{
+    transform: translate3d(0, -30px, 0)
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
 }

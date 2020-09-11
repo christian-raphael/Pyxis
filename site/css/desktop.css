@@ -63,7 +63,11 @@
     section#home div.img-home img {
         width: 500px;
     }
-
+    section#about,
+    section#project,
+    section#contact{
+        height: 100vh;
+    }
     section#about img {
         width: 500px;
     } 
