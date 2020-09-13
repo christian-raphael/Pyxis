@@ -88,6 +88,10 @@ img.logo {
     margin: 0;
 }
 
+.menu a.active {
+    color: var(--main-color);
+}
+
 section{
     width: 100%;
     
@@ -267,7 +271,7 @@ section#gallery .container .group-image{
 }
 
 .small {
-    height: auto;
+    flex: 1;
 }
 
 .img-gallery{

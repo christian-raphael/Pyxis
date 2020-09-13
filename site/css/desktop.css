@@ -1,4 +1,12 @@
 @media(min-width: 992px) {
+    section {
+        min-height: 50vh;
+    }
+
+    div.container {
+        height: 100%;
+    }
+
     header.cabecalho div.container button.btnMenu {
         display: none;
     }
