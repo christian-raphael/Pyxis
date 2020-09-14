@@ -33,7 +33,7 @@ function back(){
     if(aux==0){
         aux=6;
     }
-    aux--;
+    aux--;    
     inModal.src = `img/gallery/${picture[aux]}`;
     inModal.style.transition = '0.5s';
 }
