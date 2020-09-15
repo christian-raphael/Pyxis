@@ -56,12 +56,10 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: auto;
     }
 
     .group-row .img-gallery{
         width: 48%;
-        height: fit-content;
     } 
 
     div.member {
@@ -91,5 +89,14 @@
     .modal-area{
         width: 332px;
         height: fit-content;
+    }
+}
+
+@media(min-width: 767px) and  (max-width: 991px) {
+    .group-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 45px;
     }
 }

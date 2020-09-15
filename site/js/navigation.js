@@ -16,6 +16,7 @@ function smoothScroll(event) {
 
 function checkScroll() {
     let sections = document.querySelectorAll('section');
+
     let sectionsOffsetTop = [];
 
     sections.forEach(section => {

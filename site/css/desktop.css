@@ -77,7 +77,7 @@
         height: 100vh;
     }
     section#about img {
-        width: 500px;
+        width: 50%;
     } 
 
     section#about div.content-text {
@@ -93,7 +93,7 @@
     }
 
     section#project div.container img {
-        width: 500px;
+        width: 50%;
     }
 
     section#project div.container div.content-text {
