@@ -99,6 +99,12 @@ section{
     justify-content: center;
 }
 
+section#services, 
+section#gallery, 
+section#team {
+    padding-top: 20px;
+} 
+
 section#home{
     padding-top: 150px;
 }
@@ -130,7 +136,7 @@ section#home{
 }
 
 .img-home img{
-    width: 100%;
+    width: 85%;
 }
 
 p.subtitle {
@@ -155,7 +161,9 @@ h2.title {
     margin: 0 0 16px;
 }
 
+a.button,
 button.button {
+    text-decoration: none;
     background: var(--main-color);
     color: #FFF;
     font-size: 17px;
