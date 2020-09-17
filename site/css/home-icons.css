@@ -5,6 +5,7 @@ div.icons {
     top: 65px;
     left: 0;
     box-sizing: border-box;
+    display: none;
 }
 
 i.grey-icon {
