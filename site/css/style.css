@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    --main-color: #FF2820;
+    --main-color: #FF3A35;
+    --main-color-op: #ff38358e;
     --title-color: #363636;
     --subtitle-color: #666666;
     --text-color: #747e88;
