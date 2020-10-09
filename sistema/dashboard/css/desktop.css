@@ -158,3 +158,10 @@
         flex-wrap: wrap;
     }
 }
+
+
+@media(min-width: 992px) and (max-width: 1085px){
+    section#overview div.container div.card-monitoramento {
+        height: 200px;
+    }
+}

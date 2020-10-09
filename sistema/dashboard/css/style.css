@@ -218,12 +218,27 @@ section#overview div.card div.card-footer i {
     font-size: 32px;
 }
 
+/* MONITORAMENTO */
+
+section#overview div.card-monitoramento{
+    height: 180px;
+}
+
+section#overview div.card p.information {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
 i.icon-check {
     color: rgb(100, 237, 111);
 }
 
 i.icon-warn {
     color: rgb(237, 100, 100);
+}
+
+i.icon-computer {
+    color: cornflowerblue;
 }
 
 /* CHART SECTIONS */
