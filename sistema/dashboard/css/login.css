@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --main-color: #FF3A35;
+    --main-color-op: #ff38358e;
+    --title-color: #363636;
+    --subtitle-color: #666666;
+    --text-color: #747e88;
+    --icon-color: rgb(66, 66, 66);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+div.area-login {
+    width: 35%;
+    height: 100%;
+    box-shadow: 0 15px 20px 0 rgb(75, 75, 75);
+}
+
+div.area-login div.container { 
+    width: 70%;
+    height: 50%;
+    flex-direction: column;
+}
+
+div.area-login div.container h1 { 
+    margin-bottom: 25px;
+}
+
+div.area-login div.container * {
+    margin: 10px 0;
+}
+
+div.area-login div.container div.area-btn{
+    width: 100%;
+    height: 45px;
+    position: relative;
+    border-radius: 3px;
+    background: #d8d8d8;
+}
+
+div.area-login div.container input.input-login,button.button-login {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+
+div.area-login div.container div.area-btn div.background{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    margin: 0 !important;
+    border-radius: 3px;
+}
+
+div.area-login div.container button.button-login {
+    background: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+}
+
+div.area-login div.container div.footer-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.area-login div.container p {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--title-color);
+    margin: 0;
+}
+
+div.area-login div.container p.active {
+    color: var(--main-color);
+}
+
+
+
+
+
+
+div.area-img {
+    width: 65%;
+    height: 100%;
+    background: var(--main-color);
+}
+
+
+
+
+
+.anime{
+    background: var(--main-color) !important;
+    animation: progress-animation 0.8s;
+ }
+ 
+ 
+ @keyframes progress-animation{
+     0% { width: 0%; }
+     
+     100% { width: 100%}
+     
+ }
