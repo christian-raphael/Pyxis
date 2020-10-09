@@ -1,0 +1,11 @@
+@media(min-width: 520px) {
+    section#overview div.container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section#overview div.container div.card {
+        width: 48%;
+    }
+}

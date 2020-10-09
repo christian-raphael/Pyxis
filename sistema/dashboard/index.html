@@ -7,31 +7,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css">
+    <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/hamburgers.css">
-    <title>Document</title>
+    <title>Dashboard</title>
 </head>
 
 <body>
     <nav class='nav-menu'>
         <div class="container">
-            <h1>logo</h1>
-            <ul class='menu'>
-                <li><a href="">link 1</a></li>
-                <li><a href="">link 2</a></li>
-                <li><a href="">link 3</a></li>
-                <li><a href="">link 4</a></li>
-                <li><a href="">link 5</a></li>
-            </ul>
+            <div class='logo-area'>
+                <h1>Logo</h1>
+            </div>
+
+            <div class='menu-area hidden'>
+                <ul class='menu hidden'>
+                    <h2>Logo</h2>
+                    <li>
+                        <i class="material-icons"> dashboard </i>
+                        <a href="" class='current'>Home</a>
+                    </li>
+                    <li>
+                        <i class="material-icons"> computer </i>
+                        <a href="">Gerênciar Máquinas</a>
+                    </li>
+                    <li>
+                        <i class="material-icons"> apps </i>
+                        <a href="">Monitorar Máquinas</a>
+                    </li>
+                    <li>
+                        <i class="material-icons"> description </i>
+                        <a href="">Relatórios</a>
+                    </li>
+                    <li>
+                        <i class="material-icons"> build </i>
+                        <a href="">Configurações</a>
+                    </li>
+
+                </ul>
+            </div>
 
 
             <div class='menu-icons'>
                 <div>
-                    <div class='photo'></div>
+                    <img src='img/avatar-f.png' class='photo'>
                 </div>
 
                 <div>
                     <i class='material-icons'>
-                        notifications_none
+                        notifications
                     </i>
                 </div>
 
@@ -50,6 +74,20 @@
                 <div class='card'>
                     <h2> <span>#</span> Home</h2>
                     <p>Acompanhe os dados em tempo real</p>
+                </div>
+
+                <div class='card header-icons'>
+                    <div class="user-area">
+                        <div class='photo-area'>
+                            <img src='img/avatar-f.png' class='photo'>
+                        </div>
+                        <p>Gustavo Henrique</p>
+                    </div>
+        
+                    <i class='material-icons'>
+                        notifications
+                    </i>
+    
                 </div>
             </div>
         </div>
@@ -107,7 +145,7 @@
             </div>
         </section>
 
-        <section class='section-chart'>
+        <section id='charts'>
             <h2 class='section-title'>Estátisticas</h2>
 
             <div class="container">
@@ -137,12 +175,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class='section-chart'>
-
-            <div class="container">
                 <div class="card">
                     <div>
                         <h3>Gráfico Linha</h3>
@@ -180,6 +213,7 @@
     </footer>
 
     <script src='js/AnimationMenu.js'></script>
+    <script src="js/DisplayMenuMobile.js"></script>
 </body>
 
 </html>
