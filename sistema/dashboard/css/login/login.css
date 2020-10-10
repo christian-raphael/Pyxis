@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --main-color: #FF3A35;
+    --main-color-op: #ff38358e;
+    --title-color: #363636;
+    --subtitle-color: #666666;
+    --text-color: #747e88;
+    --icon-color: rgb(66, 66, 66);
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+div.area-login {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 15px 20px 0 rgb(75, 75, 75);
+    transition: all .6s;
+}
+
+div.area-login div.container { 
+    width: 70%;
+    height: 50%;
+    flex-direction: column;
+}
+
+div.area-login div.container h1 { 
+    margin-bottom: 25px;
+}
+
+div.area-login div.container div.area-btn{
+    width: 100%;
+    height: 45px;
+    position: relative;
+    border-radius: 3px;
+    background: #d8d8d8;
+    margin: 10px 0;
+}
+
+div.area-login div.container button.button-login {
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+}
+
+
+div.area-login div.container div.area-btn div.background{
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    margin: 0 !important;
+    border-radius: 3px;
+}
+
+
+div.area-login div.container div.footer-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.area-login div.container p {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--title-color);
+    margin: 10px 0;
+}
+
+div.area-login div.container p.active {
+    color: var(--main-color);
+}
+
+
+
+/* ANIMATION INPUT */
+
+.form-group {
+    position:relative;
+    width: 100%;  
+    margin: 10px 0;
+}
+
+.form-label {
+    position: absolute;
+    left: 10px;
+    top: 14px;
+    color: var(--text-color);
+    background-color: white;
+    z-index: 10;
+    padding: 0 5px;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.focused .form-label {
+    transform: translateY(-140%);
+    font-size: .75em;
+}
+
+.form-input {
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    height: 45px;
+    outline: 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    transition: box-shadow 150ms ease-out;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+.form-input:focus {
+    border: 2px solid var(--text-color);
+}
+
+
+/* ANIMATION BUTTON */
+
+.anime{
+    background: var(--main-color) !important;
+    animation: progress-animation 0.8s;
+ }
+ 
+ @keyframes progress-animation{
+     0% { width: 0%; }
+     
+     100% { width: 100%}
+     
+ }
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid var(--main-color);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--main-color) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+0% {
+        transform: rotate(0deg);
+    }
+100% {
+        transform: rotate(360deg);
+    }
+}
