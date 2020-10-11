@@ -197,6 +197,12 @@ section#overview div.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 1;
+    transition: all .5s;
+}
+
+section#overview div.card.opacity {
+    opacity: 0;
 }
 
 section#overview div.card h2.card-number {
@@ -244,11 +250,20 @@ i.icon-computer {
 /* CHART SECTIONS */
 section#charts div.card { 
     margin: 12px 0;
+    transform: translateY(0);          
+    opacity: 1;
+    transition: all .5s;
+}
+
+section#charts div.card.opacity {
+    transform: translateY(10px);          
+    opacity: 0;
 }
 
 div.chart-area {
-    height: 260px;
     width: 100%;
+    height: 300px;
+    padding: 10px;
     margin: 15px 0;
     background: #e3e3e3;
 }
@@ -261,7 +276,7 @@ ul.ul-legend {
 }
 
 ul.ul-legend li {
-    margin-top: 5px;
+    margin-top: 10px;
     width: 48%;
     list-style: none;
     display: flex;
@@ -270,8 +285,19 @@ ul.ul-legend li {
 div.legend-color {
     width: 30px;
     height: 15px;
-    background: red;
     margin-right: 10px;
+}
+
+ul.ul-legend li:nth-child(1) div.legend-color {
+    background: rgb(255, 99, 132);
+}
+
+ul.ul-legend li:nth-child(2) div.legend-color {
+    background:rgb(54, 162, 235);
+}
+
+ul.ul-legend li:nth-child(3) div.legend-color {
+    background: rgb(255, 205, 86);
 }
 
 /* FOOTER */
@@ -281,4 +307,15 @@ footer {
     padding: 20px 0;
     font-size: 18px;
     text-align: center;
+}
+
+@keyframes teste {
+    from {
+        transform: translateY(20px);          
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);          
+        opacity: 1;
+    }
 }
