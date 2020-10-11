@@ -178,4 +178,8 @@
         width: 332px;
         height: fit-content;
     }
+
+    div.card-plan{
+        width: 31%;
+    }
 }

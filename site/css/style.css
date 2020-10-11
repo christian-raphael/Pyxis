@@ -99,7 +99,8 @@ section{
 
 section#services, 
 section#gallery, 
-section#team {
+section#team,
+section#plan {
     padding-top: 20px;
 } 
 
@@ -298,6 +299,9 @@ section#gallery .container .group-image{
     filter: brightness(0.6);
 }
 
+
+
+
 /* SERVICES */
 
 section#services {
@@ -311,7 +315,7 @@ div.services-group {
     width: 100%;
 }
 
-section#services div.service {
+div.service {
     background: white;
     display: flex;
     flex-direction: column;
@@ -326,7 +330,7 @@ section#services div.service {
     transition: all .5s;
 }
 
-section#services div.service div.service-icon {
+div.service div.service-icon {
     width: 75px;
     height: 75px;
     min-height: 75px;
@@ -338,13 +342,13 @@ section#services div.service div.service-icon {
     border: 1px solid #eeeeee;
 }
 
-section#services div.service div.service-icon span{
+div.service div.service-icon span{
     font-size: 40px;
     color: var(--main-color);
     transition: all .5s;
 }
 
-section#services div.service h3.service-name {
+div.service h3.service-name {
     font-size: 18px;
     font-weight: 500;
     color: var(--title-color);
@@ -353,7 +357,7 @@ section#services div.service h3.service-name {
     margin: 15px 0 12px 0;
 }
 
-section#services div.service p.service-info {
+div.service p.service-info {
     font-size: 16px;
     text-align: center;
     font-weight: lighter;
@@ -362,16 +366,79 @@ section#services div.service p.service-info {
     height: 40%;
 }
 
-section#services div.service:hover {
+div.service:hover {
     box-shadow: 0 2px 15px 12px rgba(198,198,198,.3);
 }
 
-section#services div.service:hover div.service-icon {
+div.service:hover div.service-icon {
     background: var(--main-color);
 }
 
-section#services div.service:hover span {
+div.service:hover span {
     color: white !important;
+}
+
+/* PLAN */
+
+div.card-plan{
+    width: 100%;
+}
+
+div.card-plan div.plan-icon {
+    width: 200px;
+    height: 200px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    border: 0;
+}
+
+
+div.card-plan h3.plan-name{
+   font-size: 30px;
+   margin-bottom: 20px;
+}
+
+div.card-plan h3.value{
+    font-size: 30px;
+    margin: 20px 0;
+    color: var(--main-color);
+ }
+
+div.plan-icon img{
+    width: 100%;
+}
+
+div.line-detail{
+    width: 85%;
+    display: flex;
+    margin: 8px 0;
+}
+
+div.line-detail .material-icons{
+   margin-right: 6px;
+}
+
+div.line-detail .seticon{
+    color: var(--main-color);
+}
+
+.settext{
+    color: black !important;
+    font-weight: bold !important;
+}
+
+div.line-detail .unseticon{
+    color: #adadad;
+}
+
+
+
+div.card-plan button{
+    width: 100%;
+    margin: 8px 0;
 }
 
 /* TIME */
