@@ -55,6 +55,30 @@ function goLogin(){
         container.classList.add(animacao);
         document.querySelector('#formcadastro').classList.add('displaynone');
         document.querySelector('#formlogin').classList.remove('displaynone');
-    },800)
+    },800);
    
 }
+
+let btnLogin = document.querySelector('.button-login');
+
+function login(event){
+    event.preventDefault();
+    let container = document.querySelector('.container');
+    let loader = document.querySelector('.loader');
+    let areaLogin = document.querySelector('.area-login');
+    let areaImg = document.querySelector('.area-img');
+
+    container.classList.add('displaynone');
+    loader.classList.remove('displaynone');
+
+    setTimeout(function(){
+        loader.classList.add('displaynone');
+        areaLogin.classList.add('expand');
+        areaImg.classList.add('decrease');
+        setTimeout(function(){
+            window.location = 'home.html';
+        },1500);
+    }, 2000);
+}
+
+btnLogin.addEventListener('click', login);

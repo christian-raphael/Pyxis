@@ -72,7 +72,7 @@ div.area-login div.container div.area-btn{
     margin: 15px 0;
 }
 
-div.area-login div.container button.button-login {
+div.area-login div.container input.button-login {
     width: 100%;
     height: 45px;
     outline: none;
@@ -234,4 +234,29 @@ div.area-login div.container p.active {
 [data-anime].animate{
     opacity: 1;
     transform: translate3d(0px, 0px, 0px)
+}
+
+/* ANIMTION ACÃO LOGIN */
+
+.expand{
+    width: 100% !important;
+}
+
+.decrease{
+    width: 0% !important;
+}
+
+.loader {
+    border: 14px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 14px solid var(--main-color);
+    width: 100px;
+    height: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

@@ -16,5 +16,15 @@
         width: 60%;
         height: 100%;
         background: var(--main-color);
+        transition: all .6s;
     }
+
+    .expand{
+        width: 100%;
+    }
+    
+    .decrease{
+        width: 0%;
+    }
+    
 }
