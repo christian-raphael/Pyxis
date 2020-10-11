@@ -157,6 +157,13 @@
         width: 49%;
         flex-wrap: wrap;
     }
+
+    section div.area-login{
+        width: 30%;
+    }
+    section div.area-img{
+        width: 70%;
+    }
 }
 
 

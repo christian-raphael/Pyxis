@@ -28,9 +28,8 @@ section {
 }
 
 div.area-login {
-    width: 100%;
+    min-width: 359px;
     height: 100%;
-    box-shadow: 0 15px 20px 0 rgb(75, 75, 75);
     transition: all .6s;
 }
 
@@ -108,19 +107,20 @@ div.area-login div.container p.active {
 .form-label {
     position: absolute;
     left: 10px;
-    top: 14px;
+    top: 15px;
     color: var(--text-color);
     background-color: white;
     z-index: 10;
     padding: 0 5px;
     transition: transform 150ms ease-out, font-size 150ms ease-out;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    
 }
 
 .focused .form-label {
-    transform: translateY(-140%);
+    transform: translateY(-145%);
     font-size: .75em;
+    font-weight: 700;
 }
 
 .form-input {
