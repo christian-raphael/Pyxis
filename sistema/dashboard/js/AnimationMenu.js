@@ -8,3 +8,17 @@ if (hamburgers.length > 0) {
         }, false);
     });
 }
+
+// DESKTOP
+
+function animateDesktopMenu() {
+    let containerMenu = document.querySelector(".nav-menu div.container");
+
+    if(sessionStorage.getItem("homeAccessCounter") < 1) {
+        containerMenu.classList.add("animated");
+    }
+
+    sessionStorage.setItem("homeAccessCounter", 1);
+}
+
+animateDesktopMenu();

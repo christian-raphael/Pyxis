@@ -33,6 +33,19 @@
         padding: 30px 0;
     }
 
+    nav.nav-menu div.container.animated {
+        animation: up 0.5s normal ease-in-out;
+    }
+
+    @keyframes up {
+        from {
+            transform: translateY(100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
     nav.nav-menu div.container div.logo-area {
         display: flex;
         align-items: center;
@@ -82,8 +95,17 @@
         transition: all .2s;
     }
 
-    div.menu-area ul.menu li:hover a {
-        color: var(--main-color);
+    div.menu-area ul.menu li a {
+        width: 100%;
+    }
+
+    div.menu-area ul.menu li.active {
+        background: var(--main-color);
+    }
+
+    div.menu-area ul.menu li.active a,
+    div.menu-area ul.menu li.active i {
+        color: white;
     }
 
     /* HEADER MENU */
