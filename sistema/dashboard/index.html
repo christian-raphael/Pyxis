@@ -11,29 +11,67 @@
 <body>
     <section class="flex">
         <div class="area-login flex">
-            <div class="container flex">
-                <h1>CallTech</h1>
+            <div class="container flex animate" data-anime="modal">
+                <form action="" id="formlogin">
+                    <div class="cabecalho-login">
+                        <h1>CallTech</h1>
+                        <p>Observe as informações das máquinas.</p>
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label">Usuário</label>
-                    <input id="user" class="form-input" type="text"/>
-                </div>
+                    <div class="form-group">
+                        <label class="form-label">Usuário</label>
+                        <input id="user" class="form-input" type="text"/>
+                    </div>
 
-                <div class="form-group">
-                    <label class="form-label">Senha</label>
-                    <input id="passwd" class="form-input" type="password" onkeyup="colorButton()"/>
-                </div>
+                    <div class="form-group">
+                        <label class="form-label">Senha</label>
+                        <input id="passwd" class="form-input" type="password" onkeyup="colorButton()"/>
+                    </div>
 
-                <div class="area-btn">
-                    <div class="background"></div>
-                    <button class="button-login">Entrar</button>
-                </div>
-                
-                <div class="footer-login">
-                    <p>Cadastre-se</p>
-                    <p class="active">Esqueceu a senha?</p>
-                </div>
-            </div>
+                    <div class="area-btn">
+                        <div class="background"></div>
+                        <button class="button-login">Entrar</button>
+                    </div>
+                    
+                    <div class="footer-login">
+                        <p onclick="goAdduser()">Cadastre-se</p>
+                        <p class="active">Esqueceu a senha?</p>
+                    </div>
+                </form>
+
+                <form action="" class="displaynone" id="formcadastro">
+                    <div class="cabecalho-login">
+                        <h1>Cadastre-se</h1>
+                        <p>Preencha o formulário com seus dados.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Usuário</label>
+                        <input id="addUser" class="form-input" type="text"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input id="addEmail" class="form-input" type="text"/>
+                    </div>
+
+                    
+
+                    <div class="form-group">
+                        <label class="form-label">Senha</label>
+                        <input id="addPasswd" class="form-input" type="password" onkeyup="colorButton()"/>
+                    </div>
+
+                    <div class="area-btn">
+                        <div class="background"></div>
+                        <button class="button-login">Finalizar</button>
+                    </div>
+                    
+                    <div class="footer-login">
+                        <p class="active" onclick="goLogin()">Voltar para o login</p>
+                    </div>
+                </form>
+            </div>    
         </div>
         <div class="area-img">
 
