@@ -54,9 +54,11 @@
                 </div>
 
                 <div>
-                    <i class='material-icons'>
-                        notifications
-                    </i>
+                    <button class='btnNotifications'>
+                        <i class='material-icons'>
+                            notifications
+                        </i>
+                    </button>
                 </div>
 
                 <button class="btnMenu hamburger hamburger--collapse">
@@ -67,6 +69,12 @@
             </div>
         </div>
     </nav>
+
+    <div class='notifications hidden'>
+        <div class="container">
+            <p>Tudo tranquilo! Não há nenhuma notificação!</p>
+        </div>
+    </div>
 
     <header>
         <div class="container">
@@ -84,9 +92,11 @@
                         <p>Gustavo Henrique</p>
                     </div>
         
-                    <i class='material-icons'>
-                        notifications
-                    </i>
+                    <button class="btnNotifications">
+                        <i class='material-icons'>
+                            notifications
+                        </i>
+                    </button>
     
                 </div>
             </div>
@@ -205,8 +215,10 @@
         </div>
     </footer>
 
-    <script src='js/AnimationMenu.js'></script>
     <script src="js/DisplayMenuMobile.js"></script>
+    <script src="js/DisplayNotifications.js"></script>
+
+    <script src='js/AnimationMenu.js'></script>
     <script src="js/AnimationCards.js"></script>
     <script src="js/AnimationChartCard.js"></script>
 

@@ -154,6 +154,49 @@ div.menu-area ul.menu li a.current {
     color: var(--main-color);
 }
 
+/* MENU NOTIFICATIONS AREA */
+
+button.btnNotifications {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+div.notifications {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 75px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 200px;
+    width: 90%;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 15px 20px 0 rgba(88,91,96,.1);
+    opacity: 1;
+    visibility: visible;
+    transition: all .2s;
+}
+
+div.notifications div.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.notifications.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+div.notifications p {
+    text-align: center;
+    font-size: 18px;
+}
+
 /* MENU HEADER */
 
 header {

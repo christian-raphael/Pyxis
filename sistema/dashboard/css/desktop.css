@@ -108,6 +108,18 @@
         color: white;
     }
 
+    /* MENU NOTIFICATIONS AREA */
+
+    div.notifications {
+        top: 120px;
+        right: 4%;
+        left: auto;
+        margin: 0;
+        max-width: 25.21%;
+        height: 200px;
+        padding: 10px;
+    }
+
     /* HEADER MENU */
 
     header div.header-icons {
