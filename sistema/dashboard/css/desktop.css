@@ -183,6 +183,13 @@
     section#charts div.card ~ div.card {
         width: 58%;
     }
+
+    section div.area-login{
+        width: 30%;
+    }
+    section div.area-img{
+        width: 70%;
+    }
 }
 
 

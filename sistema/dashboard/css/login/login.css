@@ -28,16 +28,35 @@ section {
 }
 
 div.area-login {
-    width: 100%;
+    min-width: 359px;
     height: 100%;
-    box-shadow: 0 15px 20px 0 rgb(75, 75, 75);
     transition: all .6s;
 }
 
 div.area-login div.container { 
     width: 70%;
-    height: 50%;
+    height: 80%;
     flex-direction: column;
+}
+
+form{
+    width: 100%;
+}
+
+div.area-login div.container div.cabecalho-login{
+    width: 100%;
+    margin: 30px 0;
+}
+
+div.area-login div.container div.cabecalho-login h1{
+    font-size: 32px;
+    margin: 0;
+}
+
+div.area-login div.container div.cabecalho-login p{
+    font-size: 15px;
+    font-weight: 100;
+    color: var(--subtitle-color);
 }
 
 div.area-login div.container h1 { 
@@ -50,7 +69,7 @@ div.area-login div.container div.area-btn{
     position: relative;
     border-radius: 3px;
     background: #d8d8d8;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 div.area-login div.container button.button-login {
@@ -88,7 +107,8 @@ div.area-login div.container p {
     font-size: 12px;
     font-weight: bold;
     color: var(--title-color);
-    margin: 10px 0;
+    margin: 5px 0;
+    cursor: pointer;
 }
 
 div.area-login div.container p.active {
@@ -97,30 +117,35 @@ div.area-login div.container p.active {
 
 
 
+.displaynone{
+    display: none;
+}
+
 /* ANIMATION INPUT */
 
 .form-group {
     position:relative;
     width: 100%;  
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .form-label {
     position: absolute;
-    left: 10px;
-    top: 14px;
+    left: 15px;
+    top: 15px;
     color: var(--text-color);
     background-color: white;
     z-index: 10;
     padding: 0 5px;
     transition: transform 150ms ease-out, font-size 150ms ease-out;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    
 }
 
 .focused .form-label {
-    transform: translateY(-140%);
+    transform: translateY(-145%);
     font-size: .75em;
+    font-weight: 700;
 }
 
 .form-input {
@@ -190,4 +215,23 @@ div.area-login div.container p.active {
 100% {
         transform: rotate(360deg);
     }
+}
+
+
+
+
+/* ANIMACAO CADASTRO/LOGIN */
+
+[data-anime] {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+[data-anime="modal"]{
+    transform: translate3d(0, -30px, 0)
+}
+  
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px)
 }
