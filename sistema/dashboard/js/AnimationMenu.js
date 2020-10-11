@@ -14,6 +14,8 @@ if (hamburgers.length > 0) {
 function animateDesktopMenu() {
     let containerMenu = document.querySelector(".nav-menu div.container");
 
+    containerMenu.classList.remove("hidden");
+
     if(sessionStorage.getItem("homeAccessCounter") < 1) {
         containerMenu.classList.add("animated");
     }

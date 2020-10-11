@@ -31,6 +31,11 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 30px 0;
+        visibility: visible;
+    }
+
+    nav.nav-menu div.container.hidden {
+        visibility: hidden;
     }
 
     nav.nav-menu div.container.animated {
