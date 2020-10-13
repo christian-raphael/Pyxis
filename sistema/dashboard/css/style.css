@@ -290,6 +290,28 @@ i.icon-computer {
     color: cornflowerblue;
 }
 
+/* RELATÓRIOS */
+
+div.combo-box {
+    width: 90%;
+}
+
+select#setor {
+    width: 48%;
+    padding: 13px;
+}
+
+select#periodo {
+    width: 23%;
+    padding: 13px;
+}
+
+form#periodo {
+    width: 20%;
+    display:flex;
+}
+
+
 /* CHART SECTIONS */
 section#charts div.card { 
     margin: 12px 0;

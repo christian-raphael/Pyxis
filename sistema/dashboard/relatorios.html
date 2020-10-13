@@ -15,7 +15,7 @@
 
 <body>
     <nav class='nav-menu'>
-        <div class="container hidden">
+        <div class="container">
             <div class='logo-area'>
                 <h1>Logo</h1>
             </div>
@@ -23,9 +23,9 @@
             <div class='menu-area hidden'>
                 <ul class='menu hidden'>
                     <h2>Logo</h2>
-                    <li class='active'>
+                    <li>
                         <i class="material-icons"> dashboard </i>
-                        <a href="home.html" class='current'>Home</a>
+                        <a href="home.html">Home</a>
                     </li>
                     <li>
                         <i class="material-icons"> computer </i>
@@ -37,7 +37,7 @@
                     </li>
                     <li>
                         <i class="material-icons"> description </i>
-                        <a href="relatorios.html">Relatórios</a>
+                        <a href="relatorios.html" class='current'>Relatórios</a>
                     </li>
                     <li>
                         <i class="material-icons"> build </i>
@@ -54,11 +54,9 @@
                 </div>
 
                 <div>
-                    <button class='btnNotifications'>
-                        <i class='material-icons'>
-                            notifications
-                        </i>
-                    </button>
+                    <i class='material-icons'>
+                        notifications
+                    </i>
                 </div>
 
                 <button class="btnMenu hamburger hamburger--collapse">
@@ -70,17 +68,11 @@
         </div>
     </nav>
 
-    <div class='notifications hidden'>
-        <div class="container">
-            <p>Tudo tranquilo! Não há nenhuma notificação!</p>
-        </div>
-    </div>
-
     <header>
         <div class="container">
             <div class='menu-header'>
                 <div class='card'>
-                    <h2> <span>#</span> Home</h2>
+                    <h2> <span>#</span> Relatórios</h2>
                     <p>Acompanhe os dados em tempo real</p>
                 </div>
 
@@ -91,79 +83,47 @@
                         </div>
                         <p>Gustavo Henrique</p>
                     </div>
-        
-                    <button class="btnNotifications">
-                        <i class='material-icons'>
-                            notifications
-                        </i>
-                    </button>
-    
+
+                    <i class='material-icons'>
+                        notifications
+                    </i>
+
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-
-        <section id="overview">
-            <h2 class='section-title'>Visão Geral</h2>
-
-            <div class="container">
-                <div class="card opacity">
-                    <p class="card-title">Total de máquinas</p>
-                    <h2 class='card-number'>100</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="material-icons icon-check">
-                            check_circle
-                        </i>
-                    </div>
-                </div>
-
-                <div class="card opacity">
-                    <p class="card-title">Máquinas para reparo</p>
-                    <h2 class='card-number'>80</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="material-icons icon-warn">
-                            warning
-                        </i>
-                    </div>
-                </div>
-
-                <div class="card opacity">
-                    <p class="card-title">Máquinas ativas</p>
-                    <h2 class='card-number'>20</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="material-icons icon-check">
-                            check_circle
-                        </i>
-                    </div>
-                </div>
-
-                <div class="card opacity">
-                    <p class="card-title">Máquinas inativas</p>
-                    <h2 class='card-number'>70</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="material-icons icon-warn">
-                            warning
-                        </i>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id='charts'>
-            <h2 class='section-title'>Estátisticas</h2>
+            <h2 class='section-title'>Gráficos</h2>
+
+            <div class="combo-box">
+                <select id="setor" name="setor">
+                    <option value="">Filtrar por setor</option>
+                    <option value="">Cartão de crédito</option>
+                    <option value="">Empréstimos</option>
+                    <option value="">Cobrança</option>
+                    <option value="">Todos</option>
+                </select>
+
+                <form id="periodo">
+                    <label id="lbl-periodo" for="date1">Filtrar por período</label>
+                    <input type="date" id="date1" max="">
+                    <label id="lbl-periodo2" for="">até</label>
+                    <input type="date" id="date2">
+                </form>
+                <!-- <select id="periodo" name="periodo">
+                    <option value="">Filtrar por período</option>
+                </select> -->
+                <button class="btn-pdf">Importar PDF</button>
+            </div>
 
             <div class="container">
-                <div class="card opacity">
+                <div class="card relat">
                     <div>
-                        <h3>Gráfico Pizza</h3>
+                        <h3>Máquinas ativas e inativas por mês</h3>
                         <div class='chart-area'>
-                            <canvas id="pie-chart"></canvas>
+                            <canvas id="bar-status"></canvas>
                         </div>
                     </div>
 
@@ -172,26 +132,21 @@
                         <ul class='ul-legend'>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 1</span>
+                                <span>Ativa</span>
                             </li>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 2</span>
-                            </li>
-                            <li>
-                                <div class="legend-color"></div>
-                                <span>Legenda 3</span>
+                                <span>Inativa</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="card opacity">
+                <div class="card relat">
                     <div>
-                        <h3>Gráfico Linha</h3>
+                        <h3>Máquinas reparadas por setor</h3>
                         <div class='chart-area'>
-                            <canvas id="line-chart"></canvas>
-                            
+                            <canvas id="doughnut-setor"></canvas>
                         </div>
                     </div>
 
@@ -200,12 +155,51 @@
                         <ul class='ul-legend'>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 1</span>
+                                <span>Cartão de crédito</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Empréstimos</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Cobrança</span>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <div class="container">
+                <div class="card relat">
+                    <div>
+                        <h3>Componentes reparados por mês</h3>
+                        <div class='chart-area'>
+                            <canvas id="bar-comp"></canvas>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Legenda</h3>
+                        <ul class='ul-legend'>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>CPU</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Disco</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Memória</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
     </main>
 
@@ -215,16 +209,12 @@
         </div>
     </footer>
 
-    <script src="js/DisplayMenuMobile.js"></script>
-    <script src="js/DisplayNotifications.js"></script>
-
     <script src='js/AnimationMenu.js'></script>
-    <script src="js/AnimationCards.js"></script>
-    <script src="js/AnimationChartCard.js"></script>
-
+    <script src="js/DisplayMenuMobile.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="js/charts/lineChart.js"></script>
-    <script src="js/charts/pieChart.js"></script>
+    <script src="js/charts/verticalComp.js"></script>
+    <script src="js/charts/doughnutSetor.js"></script>
+    <script src="js/charts/verticalStatus.js"></script>
 </body>
 
 </html>
