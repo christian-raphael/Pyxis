@@ -185,6 +185,60 @@
         flex-wrap: wrap;
     }
 
+    /* RELATÓRIOS */
+
+    div.combo-box {
+        width: 93%;
+        padding: 20px;
+        display: flex;
+    }
+
+    select#setor {
+        padding: 13px;
+        margin-right: 20px;
+        width: 23%;
+    }
+
+    select#periodo {
+        padding: 13px;
+        width: 23%;
+    }
+
+    button.btn-pdf {
+        padding: 13px;
+        margin-left: 210px;
+        text-decoration: none;
+        background: var(--main-color);
+        color: #FFF;
+        font-size: 13px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+    }
+
+    form#periodo {
+        width: 45%;
+        display: flex;
+    }
+    
+    label#lbl-periodo{
+        text-align: center;
+        width: 20%;
+    }
+
+    input#date1{
+        margin-left: 15px;
+        margin-right: 20px;
+    }
+
+    input#date2{
+        margin-left: 20px;
+    }
+
+    label#lbl-periodo2{
+        padding-top: 12px;
+    }
+
     /* SECTION CHART */
 
     section#charts div.container {
@@ -199,6 +253,15 @@
 
     section#charts div.card ~ div.card {
         width: 58%;
+    }
+
+    section#charts div.card.relat {
+        width: 48%;
+        flex-wrap: wrap;
+    }    
+
+    section#charts div.card.relat ~ div.card.relat {
+        width: 48%;
     }
 
     section div.area-login{
