@@ -6,11 +6,11 @@ var lineChart = new Chart(lineContext, {
 
     // The data for our dataset
     data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         datasets: [{
             borderColor: 'rgb(255, 99, 132)',
             backgroundColor: 'rgba(0, 0, 0, 0)',
-            data: [0, 4, 2, 8, 10, 8, 6],
+            data: [4, 2, 8, 10, 8, 6, 4, 2, 8, 10, 8, 6],
         }],
     },
 
@@ -35,7 +35,7 @@ var lineChart = new Chart(lineContext, {
 });
 
 setInterval(function() {
-    if(lineChart.data.datasets[0].data.length == 7) {
+    if(lineChart.data.datasets[0].data.length == 12) {
         lineChart.data.datasets[0].data.shift();
     }
     lineChart.data.datasets[0].data.push( Math.random() * 10 + 1 );

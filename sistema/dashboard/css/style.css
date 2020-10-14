@@ -286,7 +286,8 @@ i.icon-warn {
     color: rgb(237, 100, 100);
 }
 
-i.icon-computer {
+i.icon-computer,
+i.icon-info {
     color: cornflowerblue;
 }
 
