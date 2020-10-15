@@ -287,6 +287,7 @@ section#overview div.container div.group-input .filters{
 section#overview div.container div.group-input .area-input{
     padding: 0 !important;
     position: relative;
+    z-index: -1;
 }
 
 .area-input i{
