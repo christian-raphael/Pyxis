@@ -319,6 +319,7 @@ section#charts div.card {
     transform: translateY(0);          
     opacity: 1;
     transition: all .5s;
+    z-index: -1;
 }
 
 section#charts div.card.opacity {
