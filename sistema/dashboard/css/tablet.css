@@ -27,4 +27,16 @@
         width: 0%;
     }
     
+    section#overview div.container div.group-input{
+        display: flex;
+    }
+
+    section#overview div.container div.group-input .filters{
+        width: 24%;
+    }
+
+    section#overview div.container div.group-input .filters{
+        margin-right: 11.5px;
+    }
+    
 }
