@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/tablet.css">
-    <link rel="stylesheet" href="css/desktop.css">
-    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tablet.css">
+    <link rel="stylesheet" href="../css/desktop.css">
+    <link rel="stylesheet" href="../css/hamburgers.css">
     <title>Dashboard</title>
 </head>
 
@@ -28,14 +28,6 @@
                         <a href="home.html" class='current'>Home</a>
                     </li>
                     <li>
-                        <i class="material-icons"> computer </i>
-                        <a href="">Gerênciar Máquinas</a>
-                    </li>
-                    <li>
-                        <i class="material-icons"> apps </i>
-                        <a href="monitoramento.html">Monitorar Máquinas</a>
-                    </li>
-                    <li>
                         <i class="material-icons"> description </i>
                         <a href="relatorios.html">Relatórios</a>
                     </li>
@@ -50,7 +42,7 @@
 
             <div class='menu-icons'>
                 <div>
-                    <img src='img/avatar-f.png' class='photo'>
+                    <img src='../img/avatar-f.png' class='photo'>
                 </div>
 
                 <div>
@@ -87,7 +79,7 @@
                 <div class='card header-icons'>
                     <div class="user-area">
                         <div class='photo-area'>
-                            <img src='img/avatar-f.png' class='photo'>
+                            <img src='../img/avatar-f.png' class='photo'>
                         </div>
                         <p>Gustavo Henrique</p>
                     </div>
@@ -110,7 +102,7 @@
 
             <div class="container">
                 <div class="card opacity">
-                    <p class="card-title">Total de máquinas</p>
+                    <p class="card-title">Total de Funcionários</p>
                     <h2 class='card-number'>100</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
@@ -121,7 +113,7 @@
                 </div>
 
                 <div class="card opacity">
-                    <p class="card-title">Máquinas para reparo</p>
+                    <p class="card-title">Horas perdidas hoje</p>
                     <h2 class='card-number'>80</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
@@ -132,7 +124,7 @@
                 </div>
 
                 <div class="card opacity">
-                    <p class="card-title">Máquinas ativas</p>
+                    <p class="card-title">Horas perdidas na Semana</p>
                     <h2 class='card-number'>20</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
@@ -143,7 +135,7 @@
                 </div>
 
                 <div class="card opacity">
-                    <p class="card-title">Máquinas inativas</p>
+                    <p class="card-title">Horas perdidas no Mês</p>
                     <h2 class='card-number'>70</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
@@ -161,7 +153,7 @@
             <div class="container">
                 <div class="card opacity">
                     <div>
-                        <h3>Gráfico Pizza</h3>
+                        <h3>Horas Perdidas</h3>
                         <div class='chart-area'>
                             <canvas id="pie-chart"></canvas>
                         </div>
@@ -172,15 +164,15 @@
                         <ul class='ul-legend'>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 1</span>
+                                <span>Dia Atual</span>
                             </li>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 2</span>
+                                <span>Semana</span>
                             </li>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 3</span>
+                                <span>Mês</span>
                             </li>
                         </ul>
                     </div>
@@ -188,7 +180,7 @@
 
                 <div class="card opacity">
                     <div>
-                        <h3>Gráfico Linha</h3>
+                        <h3>Prejuízos e Horas Perdidas (Anual)</h3>
                         <div class='chart-area'>
                             <canvas id="line-chart"></canvas>
                             
@@ -200,7 +192,11 @@
                         <ul class='ul-legend'>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 1</span>
+                                <span>Prejuízo (A cada R$1000)</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Horas Perdidas</span>
                             </li>
                         </ul>
                     </div>
@@ -215,16 +211,16 @@
         </div>
     </footer>
 
-    <script src="js/DisplayMenuMobile.js"></script>
-    <script src="js/DisplayNotifications.js"></script>
+    <script src="../js/DisplayMenuMobile.js"></script>
+    <script src="../js/DisplayNotifications.js"></script>
 
-    <script src='js/AnimationMenu.js'></script>
-    <script src="js/AnimationCards.js"></script>
-    <script src="js/AnimationChartCard.js"></script>
+    <script src='../js/AnimationMenu.js'></script>
+    <script src="../js/AnimationCards.js"></script>
+    <script src="../js/AnimationChartCard.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="js/charts/lineChart.js"></script>
-    <script src="js/charts/pieChart.js"></script>
+    <script src="../js/charts/lineChartGestor.js"></script>
+    <script src="../js/charts/pieChart.js"></script>
 </body>
 
 </html>
