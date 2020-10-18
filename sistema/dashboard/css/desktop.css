@@ -277,4 +277,8 @@
     section#overview div.container div.card-monitoramento {
         height: 200px;
     }
+
+    section#overview div.container div.area-filter {
+        height: 40px;
+    }
 }

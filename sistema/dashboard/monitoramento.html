@@ -94,17 +94,34 @@
         <section id="overview">
             <h2 class='section-title'>Visão Geral</h2>
             <div class="container">
-                <div class="group-input">
-                    <select name="" id="" class="filters">
-                        <option value="">Setor</option>
+                <div class="card opacity card-monitoramento area-filter">
+                    <i class="material-icons icon-filter">
+                        arrow_drop_down
+                    </i>
+                    <select name="" id="" class="group-filter"> 
+                        <option value="">Filtrar por setor</option>
+                        <option value="">Filtrar por setor</option>
+                        <option value="">Filtrar por setor</option>
                     </select>
-                    <select name="" id="" class="filters">
-                        <option value="">Setor</option>
+                </div>
+                <div class="card opacity card-monitoramento area-filter">
+                    <i class="material-icons icon-filter">
+                        arrow_drop_down
+                    </i>
+                    <select name="" id="" class="group-filter">
+                        <option value="">Filtrar por status</option>
+                        <option value="">Filtrar por status</option>
+                        <option value="">Filtrar por status</option>
                     </select>
-                    <div class="area-input filters">
-                        <input type="text">
-                        <i class="material-icons">search</i>
-                    </div>
+                </div>
+                <div class="card opacity card-monitoramento area-filter">
+                    <input type="text" class="group-filter" placeholder="Pesquisar">
+                    <i class="material-icons icon-filter">
+                        search
+                    </i>
+                </div>
+                <div class="card opacity card-monitoramento area-filter">
+                    <button class="group-filter">Adicionar máquina</button>
                 </div>
             </div>
             <div class="container">
@@ -263,9 +280,19 @@
         </div>
     </footer>
 
+    <div class="modal-computer displayNone">
+        
+        <div class="modal-area">
+            <i class="material-icons modal-close">
+                close
+            </i>
+        </div>
+    </div>
+
     <script src='js/AnimationMenu.js'></script>
     <script src="js/DisplayMenuMobile.js"></script>
     <script src="js/AnimationCards.js"></script>
+    <script src="js/DisplayModalMonitoramento.js"></script>
 
 </body>
 </html>

@@ -270,44 +270,41 @@ section#overview div.card div.card-footer i {
 
 /* MONITORAMENTO */
 
-section#overview div.container div.group-input{
-    width: 100%;
-    height: auto;
-}
 
-section#overview div.container div.group-input .filters{
-    width: 100%;
-    height: 50px;
-    border: 1px solid #d3d3d3;
-    margin: 10px 0;
-    box-sizing: border-box;
-    padding: 0 10px;
-}
-
-section#overview div.container div.group-input .area-input{
-    padding: 0 !important;
+section#overview div.container div.area-filter{
+    height: 40px;
+    padding: 0;
     position: relative;
-    z-index: -1;
 }
 
-.area-input i{
+section#overview div.container div.area-filter .icon-filter{
     position: absolute;
-    top: 12px;
-    right: 10px;
+    right: 5px;
+    top: 7px;
     color: var(--text-color);
 }
 
-section#overview div.container div.group-input .filters input{
-    position: absolute;
-    top: 0;
-    left: 0;
+section#overview div.container div.area-filter .group-filter{
     width: 100%;
     height: 100%;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     box-sizing: border-box;
     padding: 0 10px;
-    border: 0;
 }
 
+section#overview div.container div.area-filter select.group-filter{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: var(--text-color);
+}
+
+section#overview div.container div.area-filter button.group-filter{
+    background: var(--main-color);
+    color: white;
+    border: 0;
+    cursor: pointer;
+} 
 
 section#overview div.card-monitoramento{
     height: 180px;
@@ -329,6 +326,36 @@ i.icon-warn {
 i.icon-computer,
 i.icon-info {
     color: cornflowerblue;
+}
+
+.modal-computer{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.61);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-area{
+    position: relative;
+    width: 90%;
+    height: 80%;
+    background: white;
+}
+
+.modal-close{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: var(--main-color);
+}
+
+.displayNone{
+    display: none;
 }
 
 /* RELATÓRIOS */
@@ -426,3 +453,66 @@ footer {
         opacity: 1;
     }
 }
+
+
+/* SWITCH */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 22px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--main-color);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--main-color);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(21px);
+    -ms-transform: translateX(21px);
+    transform: translateX(21px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
