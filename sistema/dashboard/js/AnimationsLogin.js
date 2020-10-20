@@ -76,7 +76,7 @@ function login(event){
         areaLogin.classList.add('expand');
         areaImg.classList.add('decrease');
         setTimeout(function(){
-            window.location = 'home.html';
+            window.location = 'dashboard-suporte/home.html';
         },1500);
     }, 2000);
 }

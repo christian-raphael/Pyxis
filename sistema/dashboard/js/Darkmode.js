@@ -1,10 +1,10 @@
-
 function enableDarkMode() {
 
+    var htmlTag = document.querySelector("html");
     var checkDarkMode = document.getElementById('checkDarkMode');
     if (checkDarkMode.checked) {
-        document.body.classList.add('darkMode');
+        htmlTag.classList.add('darkMode');
     } else {
-        document.body.classList.remove('darkMode');
+        htmlTag.classList.remove('darkMode');
     }
 }

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-bt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../css/darkmode.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/tablet.css">
     <link rel="stylesheet" href="../css/desktop.css">
     <link rel="stylesheet" href="../css/hamburgers.css">
     <title>Dashboard</title>
 </head>
+
 <body>
-    <nav class='nav-menu'>
-        <div class="container">
+    <nav class='nav-menu content-area'>
+        <div class="container hidden">
             <div class='logo-area'>
                 <h1>Logo</h1>
             </div>
@@ -27,7 +30,7 @@
                     </li>
                     <li class='active'>
                         <i class="material-icons"> apps </i>
-                        <a href="monitoramento.html" class='current'>Monitorar Máquinas</a>
+                        <a href="monitoramento.html">Monitorar Máquinas</a>
                     </li>
                     <li>
                         <i class="material-icons"> description </i>
@@ -36,6 +39,14 @@
                     <li>
                         <i class="material-icons"> build </i>
                         <a href="">Configurações</a>
+                    </li>
+                    <li>
+                        <i class="material-icons"> build </i>
+                        <a href="">Darkmode</a>
+                        <label class="switch">
+                            <input type="checkbox" id='checkDarkMode' onclick="enableDarkMode()">
+                            <span class="slider round"></span>
+                        </label>
                     </li>
 
                 </ul>
@@ -48,9 +59,11 @@
                 </div>
 
                 <div>
-                    <i class='material-icons'>
-                        notifications
-                    </i>
+                    <button class='btnNotifications'>
+                        <i class='material-icons'>
+                            notifications
+                        </i>
+                    </button>
                 </div>
 
                 <button class="btnMenu hamburger hamburger--collapse">
@@ -61,27 +74,37 @@
             </div>
         </div>
     </nav>
+
+    <div class='notifications hidden content-area'>
+        <div class="container">
+            <p>Tudo tranquilo! Não há nenhuma notificação!</p>
+        </div>
+    </div>
+
     <header>
         <div class="container">
             <div class='menu-header'>
-                <div class='card'>
-                    <h2> <span>#</span> Monitoramento </h2>
-                    <p>Acompanhe as máquinas em tempo real</p>
+                <div class='card content-area'>
+                    <h2> <span>#</span> Home</h2>
+                    <p>Acompanhe os dados gerais em tempo real</p>
                 </div>
 
-                <div class='card header-icons'>
+                <div class='card header-icons content-area'>
                     <div class="user-area">
                         <div class='photo-area'>
-                            <img src='img/avatar-f.png' class='photo'>
+                            <img src='../img/avatar-f.png' class='photo'>
                         </div>
                         <p>Gustavo Henrique</p>
                     </div>
         
-                    <i class='material-icons'>
-                        notifications
-                    </i>
+                    <button class="btnNotifications">
+                        <i class='material-icons'>
+                            notifications
+                        </i>
+                    </button>
     
                 </div>
+            </div>
         </div>
     </header>
 
@@ -121,7 +144,7 @@
                 </div>
             </div>
             <div class="container">
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-check">
@@ -139,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-warn">
@@ -157,7 +180,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-check">
@@ -175,7 +198,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-warn">
@@ -193,7 +216,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-warn">
@@ -211,7 +234,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-check">
@@ -229,7 +252,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-warn">
@@ -247,7 +270,7 @@
                     </div>
                 </div>
 
-                <div class="card opacity card-monitoramento">
+                <div class="card opacity card-monitoramento content-area">
                     <div class='card-footer'>
                         <p class="card-title">Nome Máquina</p>
                         <i class="material-icons icon-check">
@@ -276,7 +299,6 @@
         </div>
     </footer>
 
-<<<<<<< HEAD:sistema/dashboard/monitoramento.html
     <div class="modal-computer displayNone">
         
         <div class="modal-area">
@@ -286,15 +308,10 @@
         </div>
     </div>
 
-    <script src='js/AnimationMenu.js'></script>
-    <script src="js/DisplayMenuMobile.js"></script>
-    <script src="js/AnimationCards.js"></script>
-    <script src="js/DisplayModalMonitoramento.js"></script>
-=======
+    <script src="../js/DisplayModalMonitoramento.js"></script>
     <script src='../js/AnimationMenu.js'></script>
     <script src="../js/DisplayMenuMobile.js"></script>
     <script src="../js/AnimationCards.js"></script>
->>>>>>> 9f3afc9219d11093fea983aba3b88ec33430b90f:sistema/dashboard/dashboard-suporte/monitoramento.html
-
+    <script src="../js/Darkmode.js"></script>
 </body>
 </html>

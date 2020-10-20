@@ -1,29 +1,7 @@
-
-body.darkMode,
-body.darkMode main{
-    background-color: #1f1f1f;
-    color: white;
+html.darkMode * {
+    --background-color: #333333;
+    --body-background: #222222;
+    --text-contrast-color: #FFFFFF;
+    --text-secondary-color: #e6e6e6;
+    --icon-color: #7a7a7a;
 }
-
-
-body.darkMode div.card, 
-body.darkMode .nav-menu, 
-body.darkMode .menu{
-    background-color: #333333;
-    color: white;
-}
-
-body.darkMode div.nav-menu div.container div.logo-area h1,
-body.darkMode div.nav-menu div.container div.menu-area ul.menu h2{
-    color: white;
-}
-
-
-body.darkMode .menu-header .card h2, 
-body.darkMode .menu-header .card p, 
-body.darkMode .menu-header .card span,
-body.darkMode main section#overview div.container div.card .btnNotifications,
-body.darkMode .card-number{
-    color: white;
-}
-
