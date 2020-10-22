@@ -2,9 +2,12 @@ package br.com.pyxis.telas;
 
 import java.util.List;
 import oshi.SystemInfo;
+import oshi.hardware.HWDiskStore;
+import oshi.hardware.HWPartition;
 import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
+import oshi.util.FormatUtil;
 
 public class TelaDados extends javax.swing.JFrame {
 
@@ -33,8 +36,9 @@ public class TelaDados extends javax.swing.JFrame {
         taProcessos = new javax.swing.JTextArea();
         lbMemoria = new javax.swing.JLabel();
         lbCpu1 = new javax.swing.JLabel();
-        lbDisco = new javax.swing.JLabel();
         btnMonitorar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        taDisco = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,7 +49,7 @@ public class TelaDados extends javax.swing.JFrame {
 
         jLabel3.setText("Memória:");
 
-        jLabel4.setText("Disco:");
+        jLabel4.setText("Informações de disco:");
 
         jLabel5.setText("Processos abertos:");
 
@@ -57,14 +61,16 @@ public class TelaDados extends javax.swing.JFrame {
 
         lbCpu1.setText("---");
 
-        lbDisco.setText("---");
-
         btnMonitorar.setText("Monitorar");
         btnMonitorar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMonitorarActionPerformed(evt);
             }
         });
+
+        taDisco.setColumns(20);
+        taDisco.setRows(5);
+        jScrollPane1.setViewportView(taDisco);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,14 +79,11 @@ public class TelaDados extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jspProcessos)
+                    .addComponent(jspProcessos, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbDisco, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4)
                             .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -89,13 +92,13 @@ public class TelaDados extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lbCpu1, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
-                                    .addComponent(lbMemoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                        .addGap(0, 12, Short.MAX_VALUE)))
+                                    .addComponent(lbMemoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(173, 173, 173)
+                                .addComponent(btnMonitorar)))
+                        .addGap(0, 12, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(183, 183, 183)
-                .addComponent(btnMonitorar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,16 +114,16 @@ public class TelaDados extends javax.swing.JFrame {
                     .addComponent(jLabel3)
                     .addComponent(lbMemoria))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(lbDisco))
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jspProcessos, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jspProcessos, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnMonitorar)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -132,19 +135,30 @@ public class TelaDados extends javax.swing.JFrame {
         HardwareAbstractionLayer hal = si.getHardware();
 
         OperatingSystem os = si.getOperatingSystem();
-
-        System.out.println("Disco");
-        lbDisco.setText(String.format("%d", hal.getDiskStores().get(0).getCurrentQueueLength()));
-
-        System.out.println("\nCPU");
+        
+        List<HWDiskStore> listaDisco = hal.getDiskStores(); 
+        for (HWDiskStore disco : listaDisco) { 
+            taDisco.append("Unidades de disco padrão\n");
+            taDisco.append(String.format("\nNome: %s \nTamanho total: %s \nEscrita: %s \nDisponível: %s\n", 
+                    disco.getName(), 
+                    FormatUtil.formatValue(disco.getSize(), "B"), 
+                    FormatUtil.formatBytes(disco.getWriteBytes()),
+                    FormatUtil.formatValue((disco.getSize() - disco.getWriteBytes()), "B"
+            )));
+            List<HWPartition> particoes = disco.getPartitions();
+            for (HWPartition partition : particoes) {
+                taDisco.append(String.format("\nPartição #%d: %s \nTamanho: %s\n", 
+                    partition.getMinor(),
+                    partition.getMountPoint(), 
+                    FormatUtil.formatValue(partition.getSize(), "B")
+                ));
+            }
+        }
         lbCpu1.setText(hal.getProcessor().getProcessorIdentifier().getName());
 
-        System.out.println("\nMemória");
         lbMemoria.setText(hal.getMemory().toString());
 
-        System.out.println("\nProcessos");
         List<OSProcess> processos = os.getProcesses();
-
         for (OSProcess processo: processos) {
            taProcessos.append(processo.getProcessID()+" "+processo.getName()+"\n");
         }
@@ -194,10 +208,11 @@ public class TelaDados extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jspProcessos;
     private javax.swing.JLabel lbCpu1;
-    private javax.swing.JLabel lbDisco;
     private javax.swing.JLabel lbMemoria;
+    private javax.swing.JTextArea taDisco;
     private javax.swing.JTextArea taProcessos;
     // End of variables declaration//GEN-END:variables
 }
