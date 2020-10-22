@@ -38,5 +38,13 @@
     section#overview div.container div.group-input .filters{
         margin-right: 11.5px;
     }
+
+    form.filter {
+        max-width: 48%;
+    }
+
+    form.filter div.margin{
+       margin-bottom: 32px !important;
+    }
     
 }

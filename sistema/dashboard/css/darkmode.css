@@ -4,4 +4,5 @@ html.darkMode * {
     --text-contrast-color: #FFFFFF;
     --text-secondary-color: #e6e6e6;
     --icon-color: #7a7a7a;
+    --active-icon:  #EDF6FF;
 }
