@@ -107,12 +107,11 @@
     }
 
     div.menu-area ul.menu li.active {
-       background-color: var(--main-color);
+       background-color: var(--body-background);
     }
 
-    div.menu-area ul.menu li.active a,
-    div.menu-area ul.menu li.active i {
-        color: white;
+    div.menu-area ul.menu li.active svg.icon {
+        color: var(--active-icon);
     }
 
     /* MENU NOTIFICATIONS AREA */
@@ -138,7 +137,7 @@
     }
 
     div.menu-header div.card {
-        max-height: 80px;
+        max-height: 90px;
     }
     
     div.menu-header div.card:first-of-type {
@@ -193,23 +192,6 @@
 
     /* RELATÓRIOS */
 
-    div.combo-box {
-        width: 93%;
-        padding: 20px;
-        display: flex;
-    }
-
-    select#setor {
-        padding: 13px;
-        margin-right: 20px;
-        width: 23%;
-    }
-
-    select#periodo {
-        padding: 13px;
-        width: 23%;
-    }
-
     button.btn-pdf {
         background-color: var(--main-color);
         padding: 13px;
@@ -222,28 +204,19 @@
         border-radius: 5px;
     }
 
-    form#periodo {
-        width: 45%;
-        display: flex;
+    form.filter {
+        max-width: 48.2%;
+        flex-direction: row;
+    }
+
+    form.filter div.area-filter {
+        min-width: 42%;
+    }
+
+    form.filter div.margin {
+        margin: 0 !important; 
     }
     
-    label#lbl-periodo{
-        text-align: center;
-        width: 20%;
-    }
-
-    input#date1{
-        margin-left: 15px;
-        margin-right: 20px;
-    }
-
-    input#date2{
-        margin-left: 20px;
-    }
-
-    label#lbl-periodo2{
-        padding-top: 12px;
-    }
 
     /* SECTION CHART */
 
@@ -276,6 +249,17 @@
     section div.area-img{
         width: 70%;
     }
+
+    .switch {
+        width: 70px;
+        margin: 0;
+    }
+
+    input:checked + .slider:before {
+        -webkit-transform: translateX(120%);
+        -ms-transform: translateX(120%);
+        transform: translateX(120%);
+      }
 }
 
 
