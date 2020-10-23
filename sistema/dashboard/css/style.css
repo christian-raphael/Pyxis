@@ -4,9 +4,9 @@
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
     outline: none;
-    --main-color: #FF3A35;
-    --main-color-dark: #dd211e;
-    --main-color-op: #ff38358e;
+    --main-color: #5E72E4;
+    --main-color-dark: #172B4D;
+    /* --main-color-op: #ff38358e; */
 
     --background-color: #FFFFFF;
     --body-background: #F4F4F4;
@@ -48,7 +48,7 @@ a:hover {
 /*------------------*/
 
 body {
-    background: linear-gradient(var(--main-color-dark) 45%, var(--body-background) 33%);
+    background: linear-gradient(var(--main-color) 50%, var(--body-background) 50%);
 }
 
 
@@ -85,7 +85,7 @@ nav.nav-menu {
     position: fixed;
     width: 100%;
     top: 0;
-    
+    z-index: 10;
     display: flex;
     justify-content: center;
     height: 70px;
@@ -297,7 +297,7 @@ section#overview div.container div.area-filter{
     height: 40px;
     padding: 0;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 
 section#overview div.container div.area-filter .icon-filter{
@@ -323,7 +323,7 @@ section#overview div.container div.area-filter select.group-filter{
 }
 
 section#overview div.container div.area-filter button.group-filter{
-    background: var(--main-color);
+    background: var(--main-color-dark);
     color: white;
     border: 0;
     cursor: pointer;
