@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-185deg, #5e72e4 50%,#172B4D 50%);
+    position: relative;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+div.container{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+div.contact-area{
+    display: none;
+}
+
+div.login-area{
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    padding: 60px 25px;
+}
+
+form{
+    width: 100%;
+    height: auto;
+}
+
+form h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #393939;
+}
+
+form p{
+    font-size: 18px;
+    margin-bottom: 18px;
+    color: #646464;
+}
+
+div.area-btn{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    border-radius: 3px;
+    background: #5e72e4;
+    margin-bottom: 15px;
+}
+
+input.button-login {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    background: transparent;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    margin: 0;
+}
+
+
+div.area-btn div.background{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    margin: 0 !important;
+    border-radius: 3px;
+}
+
+div.footer-login {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+div.footer-login p{
+    font-size: 15px !important;
+    color: #646464;
+    margin: 0;
+}
+
+
+.displaynone{
+    display: none;
+}
+
+/* ANIMATION INPUT */
+
+.form-group {
+    position: relative;
+    width: 100%;  
+    margin-bottom: 25px;
+}
+
+.icon-input{
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    color: #b1b1b1;
+}
+
+.form-label {
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    color: #b1b1b1;
+    background-color: white;
+    z-index: 10;
+    padding: 0 5px;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
+    font-size: 14px;
+    
+}
+
+.focused .form-label {
+    transform: translateY(-145%);
+    font-size: .75em;
+    font-weight: 700;
+}
+
+.form-input {
+    position: relative;
+    padding: 12px 0px 5px 0;
+    width: 100%;
+    height: 50px;
+    outline: 0;
+    border: 1px solid #d8d8d8;
+    border-radius: 3px;
+    transition: box-shadow 150ms ease-out;
+    box-sizing: border-box;
+    padding: 0px 15px;
+}
+
+.form-input:focus {
+    border: 2px solid #172B4D;
+}
+
+
+/* ANIMATION BUTTON */
+
+.anime{
+    background: #172B4D !important;
+    animation: progress-animation 0.8s;
+ }
+ 
+ @keyframes progress-animation{
+     0% { width: 0%; }
+     
+     100% { width: 100%}
+     
+ }
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #172B4D;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #172B4D transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+0% {
+        transform: rotate(0deg);
+    }
+100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ANIMACAO CADASTRO/LOGIN */
+
+[data-anime] {
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+[data-anime="modal"]{
+    transform: translate3d(0, -20px, 0)
+}
+  
+[data-anime].animate{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px)
+}
+
+

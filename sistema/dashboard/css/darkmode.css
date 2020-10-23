@@ -1,7 +1,14 @@
 html.darkMode * {
+    --main-color: #172B4D;
+    --main-color-dark:#5E72E4;
     --background-color: #333333;
     --body-background: #222222;
     --text-contrast-color: #FFFFFF;
     --text-secondary-color: #e6e6e6;
     --icon-color: #7a7a7a;
+    --active-icon:  #EDF6FF;
 }
+
+input:checked + .slider {
+    background-color: var(--main-color-dark) !important;
+  }

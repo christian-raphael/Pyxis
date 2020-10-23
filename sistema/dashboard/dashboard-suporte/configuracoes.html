@@ -24,11 +24,11 @@
             <div class='menu-area hidden'>
                 <ul class='menu hidden content-area'>
                     <h2>Logo</h2>
-                    <li class='active'>
+                    <li>
                         <i class="fas fa-chart-pie icon first-icon"></i>
                         <a href="home.html">Home</a>
                     </li>
-                    <li>
+                    <li class='active'>
                         <i class="fas fa-desktop icon second-icon"></i>
                         <a href="monitoramento.html">Monitorar Máquinas</a>
                     </li>
@@ -105,101 +105,101 @@
     </header>
 
     <main>
-
         <section id="overview">
-            <h2 class='section-title'>Visão Geral</h2>
-
-            <div class="container">
-                <div class="card opacity content-area">
-                    <p class="card-title">Total de máquinas</p>
-                    <h2 class='card-number'>100</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="fas fa-info-circle icon icon-info"></i>
+            
+            <!-- FOTO DE PERFIL -->
+            <div class="card opacity card-configuracoes content-area">
+                
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Nome de usuário</p>
+                        <input id="user" class="form-input" type="text" placeholder="gustavo.henrique"/>
                     </div>
                 </div>
 
-                <div class="card opacity content-area">
-                    <p class="card-title">Máquinas para reparo</p>
-                    <h2 class='card-number'>80</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="fas fa-exclamation-triangle icon icon-warn"></i>
+            </div>
+
+            <!-- INFORMAÇÕES DE USER -->
+            <div class="card opacity card-configuracoes content-area">
+                <div class='card-footer'>
+                    <p class="card-title">Informações do Usuário</p>
+                </div>
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Nome de usuário</p>
+                        <input id="user" class="form-input" type="text" placeholder="gustavo.henrique"/>
                     </div>
                 </div>
-
-                <div class="card opacity content-area">
-                    <p class="card-title">Máquinas ativas</p>
-                    <h2 class='card-number'>20</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="fas fa-check-circle icon icon-check"></i>
+                
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Endereço de e-mail</p>
+                        <input id="user" class="form-input" type="text" placeholder="gustavo.henrique@gmail.com"/>
                     </div>
                 </div>
-
-                <div class="card opacity content-area">
-                    <p class="card-title">Máquinas inativas</p>
-                    <h2 class='card-number'>70</h2>
-                    <div class='card-footer'>
-                        <a href="">Ver mais</a>
-                        <i class="fas fa-exclamation-triangle icon icon-warn"></i>
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Primeiro nome</p>
+                        <input id="user" class="form-input" type="text" placeholder="Gustavo"/>
+                    </div>
+                </div>
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Último nome</p>
+                        <input id="user" class="form-input" type="text" placeholder="Henrique"/>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id='charts'>
-            <h2 class='section-title'>Estatísticas</h2>
-
-            <div class="container">
-                <div class="card opacity content-area">
-                    <div>
-                        <h3>Gráfico Pizza</h3>
-                        <div class='chart-area'>
-                            <canvas id="pie-chart"></canvas>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>Legenda</h3>
-                        <ul class='ul-legend'>
-                            <li>
-                                <div class="legend-color"></div>
-                                <span>Legenda 1</span>
-                            </li>
-                            <li>
-                                <div class="legend-color"></div>
-                                <span>Legenda 2</span>
-                            </li>
-                            <li>
-                                <div class="legend-color"></div>
-                                <span>Legenda 3</span>
-                            </li>
-                        </ul>
+            <!-- INFORMAÇÕES DE CONTATO -->
+            <div class="card opacity card-configuracoes content-area">
+                <div class='card-footer'>
+                    <p class="card-title">Informações de Contato</p>
+                </div>
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Endereço</p>
+                        <input id="user" class="form-input" type="text" placeholder="Usuário"/>
                     </div>
                 </div>
-
-                <div class="card opacity content-area">
-                    <div>
-                        <h3>Gráfico Linha</h3>
-                        <div class='chart-area'>
-                            <canvas id="line-chart"></canvas>
-                            
-                        </div>
+                
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">Cidade</p>
+                        <input id="user" class="form-input" type="text" placeholder="E-mail"/>
                     </div>
-
-                    <div>
-                        <h3>Legenda</h3>
-                        <ul class='ul-legend'>
-                            <li>
-                                <div class="legend-color"></div>
-                                <span>Legenda 1</span>
-                            </li>
-                        </ul>
+                </div>
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">País</p>
+                        <input id="user" class="form-input" type="text" placeholder="E-mail"/>
+                    </div>
+                </div>
+                <div class='card-footer'>
+                    <div class="form-group">
+                        <p class="information">CEP</p>
+                        <input id="user" class="form-input" type="text" placeholder="E-mail"/>
                     </div>
                 </div>
             </div>
+
+             <!-- SOBRE MIM -->
+             <div class="card opacity card-configuracoes content-area">
+                <div class='card-footer'>
+                    <p class="card-title">Informações do Usuário</p>
+                </div>
+                <p class="information">Nome de usuário</p>
+                <p class="information">Endereço de e-mail</p>
+                <p class="information">Primeiro Nome</p>
+                <p class="information">Último Nome</p>
+                <div class='card-footer'>
+                    <p class="information">Disco: 50%</p>
+                    
+                </div>
+            </div>
+
         </section>
+        
     </main>
 
     <footer>
@@ -208,18 +208,21 @@
         </div>
     </footer>
 
-    <script src="../js/DisplayMenuMobile.js"></script>
-    <script src="../js/DisplayNotifications.js"></script>
+    <div class="modal-computer displayNone">
+        
+        <div class="modal-area">
+            <i class="material-icons modal-close">
+                close
+            </i>
+        </div>
+    </div>
+
+    <script src="../js/DisplayModalMonitoramento.js"></script>
     <script src='../js/AnimationMenu.js'></script>
+    <script src="../js/DisplayMenuMobile.js"></script>
     <script src="../js/AnimationCards.js"></script>
-    <script src="../js/AnimationChartCard.js"></script>
     <script src="../js/Darkmode.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="../js/charts/lineChart.js"></script>
-    <script src="../js/charts/pieChart.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
-</body>
 
+</body>
 </html>

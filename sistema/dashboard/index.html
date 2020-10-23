@@ -3,79 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login/login.css">
-    <link rel="stylesheet" href="css/tablet.css">
-    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login/style.css">
+    <link rel="stylesheet" href="css/login/tablet.css">
+    <link rel="stylesheet" href="css/login/desktop.css">
     <title>Document</title>
 </head>
 <body>
-    <section class="flex">
-        <div class="area-login flex">
-            <div class="loader displaynone"></div>
-            <div class="container flex animate" data-anime="modal">
-                <form action="" id="formlogin">
-                    <div class="cabecalho-login">
-                        <h1>CallTech</h1>
-                        <p>Observe as informações das máquinas.</p>
+    <section>
+        <div class="container">
+            <div class="contact-area">  
+                <div class="header-contact">
+                    <h1>Seja bem-vindo!</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum suscipit, impedit nam non dolorem quae hic explicabo ab cupiditate labore, asperiores error.</p>
+                </div>
+                <div class="footer-contact">
+                    <p>Nos siga nas redes sociais :)</p>
+                    <div class="group-icons">
+                        <i class="fab fa-twitter-square"></i>
+                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-github"></i>
                     </div>
+                </div>
+            </div>
+            <div class="login-area">    
+                <div class="teste animate" data-anime="modal">
+                    <form action="" id="formlogin">
+                        <h1>Calltech</h1>
+                        <p id="text-contact"> Lorem Ipsum is simply dummy text of the printing.</p>  
 
-                    <div class="form-group">
-                        <label class="form-label">Usuário</label>
-                        <input id="user" class="form-input" type="text"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Senha</label>
-                        <input id="passwd" class="form-input" type="password" onkeyup="colorButton()"/>
-                    </div>
-
-                    <div class="area-btn">
-                        <div class="background"></div>
-                        <input type="submit" class="button-login" value="Entrar">
-                    </div>
-                    
-                    <div class="footer-login">
-                        <p onclick="goAdduser()">Cadastre-se</p>
-                        <p class="active">Esqueceu a senha?</p>
-                    </div>
-                </form>
-
-                <form action="" class="displaynone" id="formcadastro">
-                    <div class="cabecalho-login">
+                        <div class="form-group">
+                            <label class="form-label">Usuário</label>
+                            <input id="user" class="form-input" type="text"/>
+                            <i class="far fa-user icon-input"></i>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="form-label">Senha</label>
+                            <input id="passwd" class="form-input" type="password" onkeyup="colorButton()"/>
+                            <i class="far fa-eye icon-input"></i>
+                        </div>
+    
+                        <div class="area-btn">
+                            <div class="background"></div>
+                            <input type="submit" class="button-login" value="Entrar">
+                        </div>
+                        
+                        <div class="footer-login">
+                            <p onclick="goAdduser()">Cadastre-se</p>
+                            <p class="active">Esqueceu a senha?</p>
+                        </div>
+                    </form>
+    
+                    <form action="" class="displaynone" id="formcadastro">
                         <h1>Cadastre-se</h1>
-                        <p>Preencha o formulário com seus dados.</p>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Usuário</label>
-                        <input id="addUser" class="form-input" type="text"/>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input id="addEmail" class="form-input" type="text"/>
-                    </div>
-
-                    
-
-                    <div class="form-group">
-                        <label class="form-label">Senha</label>
-                        <input id="addPasswd" class="form-input" type="password" onkeyup="colorButton()"/>
-                    </div>
-
-                    <div class="area-btn">
-                        <div class="background"></div>
-                        <input type="submit" class="button-login" value="Finalizar">
-                    </div>
-                    
-                    <div class="footer-login">
-                        <p class="active" onclick="goLogin()">Voltar para o login</p>
-                    </div>
-                </form>
-            </div>    
-        </div>
-        <div class="area-img">
-
+                        <div class="form-group">
+                            <label class="form-label">Usuário</label>
+                            <input id="addUser" class="form-input" type="text"/>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input id="addEmail" class="form-input" type="text"/>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="form-label">Senha</label>
+                            <input id="addPasswd" class="form-input" type="password" onkeyup="colorButton()"/>
+                        </div>
+    
+                        <div class="area-btn">
+                            <div class="background"></div>
+                            <input type="submit" class="button-login" value="Finalizar">
+                        </div>
+                        
+                        <div class="footer-login">
+                            <p class="active" onclick="goLogin()">Voltar para o login</p>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+            
         </div>
     </section>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

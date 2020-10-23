@@ -134,12 +134,15 @@ public class TelaDados extends javax.swing.JFrame {
         SystemInfo si = new SystemInfo();
 
         HardwareAbstractionLayer hal = si.getHardware();
+        
+        System.out.println(hal.getSensors().toString());
 
         OperatingSystem os = si.getOperatingSystem();
         
        
         
         List<HWDiskStore> listaDisco = hal.getDiskStores(); 
+        
         for (HWDiskStore disco : listaDisco) { 
             taDisco.append("Unidades de disco padrão\n");
             taDisco.append(String.format("\nNome: %s \nTamanho total: %s \nEscrita: %s \nDisponível: %s\n", 

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="../css/darkmode.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/tablet.css">
@@ -22,26 +22,26 @@
             </div>
 
             <div class='menu-area hidden'>
-                <ul class='menu hidden'>
+                <ul class='menu hidden content-area'>
                     <h2>Logo</h2>
                     <li>
-                        <i class="material-icons"> dashboard </i>
+                        <i class="fas fa-chart-pie icon first-icon"></i>
                         <a href="home.html">Home</a>
                     </li>
                     <li>
-                        <i class="material-icons"> apps </i>
+                        <i class="fas fa-desktop icon second-icon"></i>
                         <a href="monitoramento.html">Monitorar Máquinas</a>
                     </li>
                     <li class='active'>
-                        <i class="material-icons"> description </i>
+                        <i class="fas fa-file icon third-icon"></i>
                         <a href="relatorios.html">Relatórios</a>
                     </li>
                     <li>
-                        <i class="material-icons"> build </i>
-                        <a href="">Configurações</a>
+                        <i class="fas fa-cog icon fourth-icon"></i>
+                        <a href="configuracoes.html">Configurações</a>
                     </li>
                     <li>
-                        <i class="material-icons"> build </i>
+                        <i class="fas fa-moon icon fifth-icon"></i>
                         <a href="">Darkmode</a>
                         <label class="switch">
                             <input type="checkbox" id='checkDarkMode' onclick="enableDarkMode()">
@@ -60,9 +60,7 @@
 
                 <div>
                     <button class='btnNotifications'>
-                        <i class='material-icons'>
-                            notifications
-                        </i>
+                        <i class="fas fa-bell icon icon"></i>
                     </button>
                 </div>
 
@@ -98,9 +96,7 @@
                     </div>
         
                     <button class="btnNotifications">
-                        <i class='material-icons'>
-                            notifications
-                        </i>
+                        <i class="fas fa-bell icon icon"></i>
                     </button>
     
                 </div>
@@ -109,29 +105,50 @@
     </header>
 
     <main>
+        <section id="overview">
+            
+            <div class="container">
+                <form class="filter">
+                    <h3 class="filter-title">Filtrar por período</h3>
+
+                    <div class="card opacity card-monitoramento area-filter area-filter-data">
+                        <input type="date" class="group-filter">
+                    </div>
+
+                    <label id="lbl-periodo2" for="">até</label>
+
+                    <div class="card opacity card-monitoramento area-filter area-filter-data">
+                        
+                        <input type="date" class="group-filter">
+                    </div>
+                </form>
+                <form class="filter">
+                    <h3 class="filter-title">Filtrar por setor</h3>
+
+                    <div class="margin card opacity card-monitoramento area-filter">
+                        
+                        <i class="fas fa-sort-down icon icon-filter"></i>
+                        <select name="setor" id="setor" class="group-filter"> 
+                            <option value="">Escolha</option>
+                            <option value="">Cartão de crédito</option>
+                            <option value="">Empréstimos</option>
+                            <option value="">Cobrança</option>
+                            <option value="">Todos</option>
+                        </select>
+                    </div>
+
+                    <div class="card opacity card-monitoramento area-filter">
+                        <button class="group-filter">Baixar PDF</button>
+                    </div>
+                </form>
+                
+            </div>
+        </section>
         <section id='charts'>
             <h2 class='section-title'>Gráficos</h2>
 
-            <div class="combo-box">
-                <select id="setor" name="setor">
-                    <option value="">Filtrar por setor</option>
-                    <option value="">Cartão de crédito</option>
-                    <option value="">Empréstimos</option>
-                    <option value="">Cobrança</option>
-                    <option value="">Todos</option>
-                </select>
-
-                <form id="periodo">
-                    <label id="lbl-periodo" for="date1">Filtrar por período</label>
-                    <input type="date" id="date1" max="">
-                    <label id="lbl-periodo2" for="">até</label>
-                    <input type="date" id="date2">
-                </form>
-                <button class="btn-pdf">Baixar PDF</button>
-            </div>
-
             <div class="container">
-                <div class="card relat">
+                <div class="card relat content-area">
                     <div>
                         <h3>Máquinas ativas e inativas por mês</h3>
                         <div class='chart-area'>
@@ -154,7 +171,7 @@
                     </div>
                 </div>
 
-                <div class="card relat">
+                <div class="card relat content-area">
                     <div>
                         <h3>Máquinas reparadas por setor</h3>
                         <div class='chart-area'>
@@ -183,7 +200,7 @@
             </div>
 
             <div class="container">
-                <div class="card relat">
+                <div class="card relat content-area">
                     <div>
                         <h3>Componentes reparados por mês</h3>
                         <div class='chart-area'>
@@ -228,6 +245,8 @@
     <script src="../js/charts/doughnutSetor.js"></script>
     <script src="../js/charts/verticalStatus.js"></script>
     <script src="../js/Darkmode.js"></script>
+    <script src="../js/AnimationCards.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 </body>
 
 </html>
