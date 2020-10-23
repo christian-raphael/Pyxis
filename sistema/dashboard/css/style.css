@@ -333,6 +333,10 @@ section#overview div.card-monitoramento{
     height: 190px;
 }
 
+section#overview div.card-configuracoes{
+    height: 300px;
+}
+
 section#overview div.card p.information {
     font-size: 14px;
     margin: 5px 0;
