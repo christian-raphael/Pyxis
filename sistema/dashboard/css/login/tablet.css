@@ -1,0 +1,47 @@
+@media(min-width: 767px){
+
+    div.container{
+        height: 70%;
+    }
+    div.login-area{
+        height: 100%;
+        width: 50%;
+    }
+
+    form h1, div.area-btn {
+        margin-bottom: 10px;
+    }
+    
+    .form-group{
+        margin-bottom: 22px;
+    }
+
+    div.contact-area{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 60px 40px 60px 0;
+        color: white;
+    }
+
+    .header-contact h1{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .header-contact p, .footer-contact p{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .group-icons{
+        font-size: 40px;
+    }
+
+    .group-icons .fab{
+        margin-right: 15px;
+    }
+}
