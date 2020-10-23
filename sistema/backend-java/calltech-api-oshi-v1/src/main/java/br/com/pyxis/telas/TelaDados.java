@@ -1,5 +1,6 @@
 package br.com.pyxis.telas;
 
+import br.com.wmixvideo.slack.Slack;
 import java.util.List;
 import oshi.SystemInfo;
 import oshi.hardware.HWDiskStore;
@@ -136,6 +137,8 @@ public class TelaDados extends javax.swing.JFrame {
 
         OperatingSystem os = si.getOperatingSystem();
         
+       
+        
         List<HWDiskStore> listaDisco = hal.getDiskStores(); 
         for (HWDiskStore disco : listaDisco) { 
             taDisco.append("Unidades de disco padrão\n");
@@ -160,8 +163,21 @@ public class TelaDados extends javax.swing.JFrame {
 
         List<OSProcess> processos = os.getProcesses();
         for (OSProcess processo: processos) {
+            
+
+             if (processo.getName().contains("csgo")){ 
+                  try {
+                    new Slack("https://hooks.slack.com/services/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")
+                    .text("A máquina "+ hal.getComputerSystem().getModel() +" está executando " + processo.getName()+"\n")
+                    .send();
+                  } catch (Exception e) {
+                       e.printStackTrace();
+                  } 
+             }
            taProcessos.append(processo.getProcessID()+" "+processo.getName()+"\n");
         }
+        
+        
     }//GEN-LAST:event_btnMonitorarActionPerformed
 
     /**

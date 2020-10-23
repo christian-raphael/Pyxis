@@ -23,6 +23,8 @@ public class DadosApi {
         OperatingSystem os = si.getOperatingSystem();
 
         
+        System.out.println(hal.getSensors().toString());
+        
         //Metódo para pegar informações dos Discos
         List<HWDiskStore> listaDisco = hal.getDiskStores(); 
         for (HWDiskStore disco : listaDisco) { 
