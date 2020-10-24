@@ -117,10 +117,11 @@
     /* MENU NOTIFICATIONS AREA */
 
     div.notifications {
+        position: absolute;
         top: 120px;
         right: 4%;
         left: auto;
-        margin: 0;
+        margin: 10px 0 0 0;
         max-width: 25.21%;
         height: 250px;
         padding: 10px;
@@ -230,7 +231,7 @@
         flex-wrap: wrap;
     }    
 
-    section#charts div.card ~ div.card {
+    section#charts div.card.big {
         width: 58%;
     }
 

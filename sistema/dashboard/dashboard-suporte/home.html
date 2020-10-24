@@ -121,7 +121,7 @@
 
                 <div class="card opacity content-area">
                     <p class="card-title">Máquinas para reparo</p>
-                    <h2 class='card-number'>80</h2>
+                    <h2 class='card-number'>20</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
                         <i class="fas fa-exclamation-triangle icon icon-warn"></i>
@@ -130,7 +130,7 @@
 
                 <div class="card opacity content-area">
                     <p class="card-title">Máquinas ativas</p>
-                    <h2 class='card-number'>20</h2>
+                    <h2 class='card-number'>70</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
                         <i class="fas fa-check-circle icon icon-check"></i>
@@ -139,7 +139,7 @@
 
                 <div class="card opacity content-area">
                     <p class="card-title">Máquinas inativas</p>
-                    <h2 class='card-number'>70</h2>
+                    <h2 class='card-number'>10</h2>
                     <div class='card-footer'>
                         <a href="">Ver mais</a>
                         <i class="fas fa-exclamation-triangle icon icon-warn"></i>
@@ -154,7 +154,7 @@
             <div class="container">
                 <div class="card opacity content-area">
                     <div>
-                        <h3>Gráfico Pizza</h3>
+                        <h3>Informações gerais</h3>
                         <div class='chart-area'>
                             <canvas id="pie-chart"></canvas>
                         </div>
@@ -165,25 +165,25 @@
                         <ul class='ul-legend'>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 1</span>
+                                <span>Máquinas para reparo</span>
                             </li>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 2</span>
+                                <span>Máquinas ativas</span>
                             </li>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 3</span>
+                                <span>Máquinas inativas</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="card opacity content-area">
+                <div class="card opacity content-area big">
                     <div>
-                        <h3>Gráfico Linha</h3>
+                        <h3>Total de problemas de máquina nesta semana</h3>
                         <div class='chart-area'>
-                            <canvas id="line-chart"></canvas>
+                            <canvas id="line-chart-pc-week"></canvas>
                             
                         </div>
                     </div>
@@ -193,7 +193,55 @@
                         <ul class='ul-legend'>
                             <li>
                                 <div class="legend-color"></div>
-                                <span>Legenda 1</span>
+                                <span>Problemas registrados</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="card opacity content-area big">
+                    <div>
+                        <h3>Total de problemas de máquina por mês</h3>
+                        <div class='chart-area'>
+                            <canvas id="line-chart-pc-year"></canvas>    
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Legenda</h3>
+                        <ul class='ul-legend'>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Problemas registrados</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card opacity content-area">
+                    <div>
+                        <h3>Total de problemas por componente</h3>
+                        <div class='chart-area'>
+                            <canvas id="bar-chart-components"></canvas>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Legenda</h3>
+                        <ul class='ul-legend'>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>CPU</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Disco</span>
+                            </li>
+                            <li>
+                                <div class="legend-color"></div>
+                                <span>Memória</span>
                             </li>
                         </ul>
                     </div>
@@ -216,8 +264,10 @@
     <script src="../js/Darkmode.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="../js/charts/lineChart.js"></script>
+    <script src="../js/charts/lineChartMaquinasSemana.js"></script>
+    <script src="../js/charts/lineChartMaquinasAno.js"></script>
     <script src="../js/charts/pieChart.js"></script>
+    <script src="../js/charts/barChartComponentes.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 </body>

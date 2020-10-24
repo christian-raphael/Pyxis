@@ -1,4 +1,4 @@
-var lineContext = document.getElementById('line-chart').getContext('2d');
+var lineContext = document.getElementById('line-chart-pc-year').getContext('2d');
 
 var lineChart = new Chart(lineContext, {
     // The type of chart we want to create

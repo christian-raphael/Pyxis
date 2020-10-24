@@ -191,10 +191,11 @@ button.btnNotifications {
 }
 
 div.notifications {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 5;
     top: 75px;
     left: 0;
     right: 0;
@@ -433,7 +434,6 @@ section#charts div.card {
     transform: translateY(0);          
     opacity: 1;
     transition: all .5s;
-    z-index: -1;
 }
 
 section#charts div.card.opacity {
