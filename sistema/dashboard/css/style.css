@@ -350,9 +350,14 @@ svg.icon-warn {
     color: rgb(237, 100, 100);
 }
 
-svg.icon-computer,
+span.icon-computer svg,
 svg.icon-info {
     color: cornflowerblue;
+}
+
+span.icon-computer,
+span.modal-close {
+    cursor: pointer;
 }
 
 .modal-computer{
@@ -365,6 +370,10 @@ svg.icon-info {
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: visible;
+    opacity: 1;
+    z-index: 100;
+    transition: all .5s;
 }
 
 .modal-area{
@@ -376,13 +385,17 @@ svg.icon-info {
 
 .modal-close{
     position: absolute;
-    top: 5px;
-    right: 5px;
-    color: var(--main-color);
+    top: 8px;
+    right: 8px;
+}
+
+.modal-close svg.icon {
+    color: #F85353 !important;
 }
 
 .displayNone{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* RELATÓRIOS */

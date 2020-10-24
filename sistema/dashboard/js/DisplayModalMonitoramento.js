@@ -7,6 +7,7 @@ function expandModalMonitoramento(){
         modal.classList.remove('displayNone');
     }
 }
+
 iconComputer.forEach(icon => {
     icon.addEventListener('click', expandModalMonitoramento);
 });
@@ -16,4 +17,5 @@ let iconClose = document.querySelector('.modal-close');
 function closeModalMonitoramento(){
     modal.classList.add('displayNone');
 }
+
 iconClose.addEventListener('click', closeModalMonitoramento);
