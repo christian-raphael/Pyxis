@@ -1,4 +1,5 @@
 var lineContext = document.getElementById('line-chart').getContext('2d');
+var htmlTag = document.querySelector("html");
 
 var lineChart = new Chart(lineContext, {
     // The type of chart we want to create
@@ -9,22 +10,27 @@ var lineChart = new Chart(lineContext, {
         labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
         datasets: [
             {
+                label: "Prejuízo (a cada R$ 1.000)",
                 borderColor: 'rgb(54 162 235)',
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 data: [0, 5, 10, 15, 5, 25, 5, 10, 15, 5, 10, 5],
+                lineTension: 0.1,
             },
             {
+                label: "Horas perdidas",
                 borderColor: 'rgb(255, 99, 132)',
                 backgroundColor: 'rgba(0, 0, 0, 0)',
                 data: [4, 2, 8, 10, 8, 6, 4, 2, 8, 10, 8, 6],
+                lineTension: 0.1
             }
         ],
+        
     },
 
     // Configuration options go here
     options: {
         legend: {
-            display: false
+            display: false,
         },
         animation: {
             easing: "easeOutQuad"
@@ -37,7 +43,7 @@ var lineChart = new Chart(lineContext, {
                     beginAtZero:true
                 }
             }]
-        }
+        },
     }
 });
 
