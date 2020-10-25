@@ -13,14 +13,16 @@ import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
 import oshi.util.FormatUtil;
 import java.time.LocalTime;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class TelaDados extends javax.swing.JFrame {
-
+public class TelaDados extends javax.swing.JFrame {   
     /**
      * Creates new form TelaDados
      */
     public TelaDados(){
         initComponents();
+        monitorarComponentes();
     }
 
     /**
@@ -190,7 +192,7 @@ public class TelaDados extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    public void HoraLeitura() {
+    public void horaLeitura() {
         LocalTime tempo = LocalTime.now();
         
         String horas = tempo.getHour() + "h";
@@ -201,73 +203,80 @@ public class TelaDados extends javax.swing.JFrame {
         lbUltimaLeitura.setText(horas+":"+minutos+":"+segundos);
     }
     
-    public void MonitorarComponentes() {       
-        SystemInfo si = new SystemInfo();
-
-        HardwareAbstractionLayer hal = si.getHardware();
-
-//        System.out.println(hal.getSensors().toString());;
-
-        OperatingSystem os = si.getOperatingSystem();
-
-        List<HWDiskStore> listaDisco = hal.getDiskStores();
+    public void monitorarComponentes() {  
+        Timer timer = new Timer();
         
-        String stringDadosDisco = "";
-        String stringDadosParticoes = "";
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                SystemInfo si = new SystemInfo();
 
-        for (HWDiskStore disco : listaDisco) {
-            stringDadosDisco += String.format("\nNome: %s \nTamanho total: %s \nEscrita: %s \nDisponível: %s\n",
-                disco.getName(),
-                FormatUtil.formatValue(disco.getSize(), "B"),
-                FormatUtil.formatBytes(disco.getWriteBytes()),
-                FormatUtil.formatValue((disco.getSize() - disco.getWriteBytes()), "B"
-                ));
-        
-            List<HWPartition> particoes = disco.getPartitions();
+                HardwareAbstractionLayer hal = si.getHardware();
 
-            for (HWPartition partition : particoes) {
-                    stringDadosParticoes += String.format("\nPartição #%d: %s \nTamanho: %s\n",
-                    partition.getMinor(),
-                    partition.getMountPoint(),
-                    FormatUtil.formatValue(partition.getSize(), "B")
-                );
+            //        System.out.println(hal.getSensors().toString());;
+
+                OperatingSystem os = si.getOperatingSystem();
+
+                List<HWDiskStore> listaDisco = hal.getDiskStores();
+
+                String stringDadosDisco = "";
+                String stringDadosParticoes = "";
+
+                for (HWDiskStore disco : listaDisco) {
+                    stringDadosDisco += String.format("\nNome: %s \nTamanho total: %s \nEscrita: %s \nDisponível: %s\n",
+                        disco.getName(),
+                        FormatUtil.formatValue(disco.getSize(), "B"),
+                        FormatUtil.formatBytes(disco.getWriteBytes()),
+                        FormatUtil.formatValue((disco.getSize() - disco.getWriteBytes()), "B"
+                        ));
+
+                    List<HWPartition> particoes = disco.getPartitions();
+
+                    for (HWPartition partition : particoes) {
+                            stringDadosParticoes += String.format("\nPartição #%d: %s \nTamanho: %s\n",
+                            partition.getMinor(),
+                            partition.getMountPoint(),
+                            FormatUtil.formatValue(partition.getSize(), "B")
+                        );
+                    }
+                }
+
+
+
+                taDisco.setText(String.format("Unidades de disco padrão\n"
+                                        + "%s\n"
+                                        + "%s\n", 
+                                        stringDadosDisco,
+                                        stringDadosParticoes));
+
+                lbCpu1.setText(hal.getProcessor().getProcessorIdentifier().getName());
+
+                lbMemoria.setText(hal.getMemory().toString());
+
+                List<OSProcess> processos = os.getProcesses();
+
+                String stringProcessos = "";
+
+                for (OSProcess processo: processos) {
+
+
+            //            try {;
+            //                new Slack("https://hooks.slack.com/services/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")
+            //                .text("A máquina "+ hal.getComputerSystem().getModel() +" está executando " + processo.getName()+"\n")
+            //                .send();
+            //            } catch (Exception e) {
+            //                e.printStackTrace();
+            //            }
+
+                stringProcessos += processo.getProcessID()+" "+processo.getName()+"\n";
+
+                }
+
+                taProcessos.setText(stringProcessos);
+
+                horaLeitura(); 
             }
-        }
-        
-        
-        
-        taDisco.setText(String.format("Unidades de disco padrão\n"
-                                + "%s\n"
-                                + "%s\n", 
-                                stringDadosDisco,
-                                stringDadosParticoes));
-        
-        lbCpu1.setText(hal.getProcessor().getProcessorIdentifier().getName());
-
-        lbMemoria.setText(hal.getMemory().toString());
-
-        List<OSProcess> processos = os.getProcesses();
-        
-        String stringProcessos = "";
-        
-        for (OSProcess processo: processos) {
-
-           
-//            try {;
-//                new Slack("https://hooks.slack.com/services/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")
-//                .text("A máquina "+ hal.getComputerSystem().getModel() +" está executando " + processo.getName()+"\n")
-//                .send();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-
-        stringProcessos += processo.getProcessID()+" "+processo.getName()+"\n";
-      
-        }
-        
-        taProcessos.setText(stringProcessos);
-        
-        HoraLeitura();
+        }, 1000, 5000);
     }
     
     /**
@@ -305,19 +314,6 @@ public class TelaDados extends javax.swing.JFrame {
                 tela.setVisible(true);
             }
         });
-        
-        tela.MonitorarComponentes();
-        
-        Thread thread = Thread.currentThread();
-        
-        while(true) {
-            try {
-                thread.sleep(10000);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(TelaDados.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            tela.MonitorarComponentes();
-        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
