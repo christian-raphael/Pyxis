@@ -219,6 +219,7 @@ public class TelaLogin extends javax.swing.JFrame {
          if(txtLogin.getText().equals("admin@admin.com.br") && pwdSenha.getText().equals("admin")){
             TelaDados tela = new TelaDados();
             tela.setVisible(true);
+            dispose();
         } else {
             JOptionPane.showMessageDialog(rootPane, "Login ou senha incorreto!");
         }
