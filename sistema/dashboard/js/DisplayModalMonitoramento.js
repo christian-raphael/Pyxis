@@ -12,10 +12,29 @@ iconComputer.forEach(icon => {
     icon.addEventListener('click', expandModalMonitoramento);
 });
 
+// ------------------------------------
 
-let iconClose = document.querySelector('.modal-close');
-function closeModalMonitoramento(){
-    modal.classList.add('displayNone');
+let btnAdd = document.querySelector('.btnAdd');
+let modalAdd = document.querySelector('.modalAdd');
+
+function expandModalAdd(){
+    if(modalAdd.classList.contains('displayNone')){
+        modalAdd.classList.remove('displayNone');
+    }
 }
 
-iconClose.addEventListener('click', closeModalMonitoramento);
+btnAdd.addEventListener('click', expandModalAdd);
+
+
+// ------------------------------------
+
+let iconClose = document.querySelectorAll('.modal-close');
+function closeModalMonitoramento(){
+    modal.classList.add('displayNone');
+    modalAdd.classList.add('displayNone');
+
+}
+
+iconClose.forEach(element => {
+    element.addEventListener('click', closeModalMonitoramento);
+});
