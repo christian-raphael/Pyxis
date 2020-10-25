@@ -1,7 +1,10 @@
 package br.com.pyxis.telas;
 
 import br.com.wmixvideo.slack.Slack;
+import java.time.LocalTime;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import oshi.SystemInfo;
 import oshi.hardware.HWDiskStore;
 import oshi.hardware.HWPartition;
@@ -9,13 +12,14 @@ import oshi.hardware.HardwareAbstractionLayer;
 import oshi.software.os.OSProcess;
 import oshi.software.os.OperatingSystem;
 import oshi.util.FormatUtil;
+import java.time.LocalTime;
 
 public class TelaDados extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaDados
      */
-    public TelaDados() {
+    public TelaDados(){
         initComponents();
     }
 
@@ -37,9 +41,10 @@ public class TelaDados extends javax.swing.JFrame {
         taProcessos = new javax.swing.JTextArea();
         lbMemoria = new javax.swing.JLabel();
         lbCpu1 = new javax.swing.JLabel();
-        btnMonitorar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         taDisco = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        lbUltimaLeitura = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,16 +67,13 @@ public class TelaDados extends javax.swing.JFrame {
 
         lbCpu1.setText("---");
 
-        btnMonitorar.setText("Monitorar");
-        btnMonitorar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMonitorarActionPerformed(evt);
-            }
-        });
-
         taDisco.setColumns(20);
         taDisco.setRows(5);
         jScrollPane1.setViewportView(taDisco);
+
+        jLabel6.setText("Última leitura:");
+
+        lbUltimaLeitura.setText("---");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,6 +83,7 @@ public class TelaDados extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jspProcessos, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
@@ -95,10 +98,10 @@ public class TelaDados extends javax.swing.JFrame {
                                     .addComponent(lbCpu1, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
                                     .addComponent(lbMemoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(173, 173, 173)
-                                .addComponent(btnMonitorar)))
-                        .addGap(0, 12, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
+                                .addComponent(jLabel6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbUltimaLeitura, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -117,77 +120,108 @@ public class TelaDados extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addGap(18, 18, 18)
-                .addComponent(jspProcessos, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnMonitorar)
-                .addContainerGap())
+                .addComponent(jspProcessos, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(lbUltimaLeitura))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public void HoraLeitura() {
+        LocalTime tempo = LocalTime.now();
+        
+        String horas = tempo.getHour() + "h";
+        String minutos = tempo.getMinute() <= 9 ? "0" + String.valueOf(tempo.getMinute()) : String.valueOf(tempo.getMinute());
+        String segundos = tempo.getSecond()<= 9 ? "0" + String.valueOf(tempo.getSecond()) : String.valueOf(tempo.getSecond());
 
-    private void btnMonitorarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMonitorarActionPerformed
+        
+        lbUltimaLeitura.setText(horas+":"+minutos+":"+segundos);
+    }
+    
+    public void MonitorarComponentes() {       
         SystemInfo si = new SystemInfo();
 
         HardwareAbstractionLayer hal = si.getHardware();
-        
-        System.out.println(hal.getSensors().toString());
+
+//        System.out.println(hal.getSensors().toString());;
 
         OperatingSystem os = si.getOperatingSystem();
+
+        List<HWDiskStore> listaDisco = hal.getDiskStores();
         
-       
-        
-        List<HWDiskStore> listaDisco = hal.getDiskStores(); 
-        
-        for (HWDiskStore disco : listaDisco) { 
-            taDisco.append("Unidades de disco padrão\n");
-            taDisco.append(String.format("\nNome: %s \nTamanho total: %s \nEscrita: %s \nDisponível: %s\n", 
-                    disco.getName(), 
-                    FormatUtil.formatValue(disco.getSize(), "B"), 
-                    FormatUtil.formatBytes(disco.getWriteBytes()),
-                    FormatUtil.formatValue((disco.getSize() - disco.getWriteBytes()), "B"
-            )));
-            List<HWPartition> particoes = disco.getPartitions();
-            for (HWPartition partition : particoes) {
-                taDisco.append(String.format("\nPartição #%d: %s \nTamanho: %s\n", 
-                    partition.getMinor(),
-                    partition.getMountPoint(), 
-                    FormatUtil.formatValue(partition.getSize(), "B")
+        String stringDadosDisco = "";
+        String stringDadosParticoes = "";
+
+        for (HWDiskStore disco : listaDisco) {
+            stringDadosDisco += String.format("\nNome: %s \nTamanho total: %s \nEscrita: %s \nDisponível: %s\n",
+                disco.getName(),
+                FormatUtil.formatValue(disco.getSize(), "B"),
+                FormatUtil.formatBytes(disco.getWriteBytes()),
+                FormatUtil.formatValue((disco.getSize() - disco.getWriteBytes()), "B"
                 ));
+        
+            List<HWPartition> particoes = disco.getPartitions();
+
+            for (HWPartition partition : particoes) {
+                    stringDadosParticoes += String.format("\nPartição #%d: %s \nTamanho: %s\n",
+                    partition.getMinor(),
+                    partition.getMountPoint(),
+                    FormatUtil.formatValue(partition.getSize(), "B")
+                );
             }
         }
+        
+        
+        
+        taDisco.setText(String.format("Unidades de disco padrão\n"
+                                + "%s\n"
+                                + "%s\n", 
+                                stringDadosDisco,
+                                stringDadosParticoes));
+        
         lbCpu1.setText(hal.getProcessor().getProcessorIdentifier().getName());
 
         lbMemoria.setText(hal.getMemory().toString());
 
         List<OSProcess> processos = os.getProcesses();
+        
+        String stringProcessos = "";
+        
         for (OSProcess processo: processos) {
-            
 
-             if (processo.getName().contains("csgo")){ 
-                  try {
-                    new Slack("https://hooks.slack.com/services/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")
-                    .text("A máquina "+ hal.getComputerSystem().getModel() +" está executando " + processo.getName()+"\n")
-                    .send();
-                  } catch (Exception e) {
-                       e.printStackTrace();
-                  } 
-             }
-           taProcessos.append(processo.getProcessID()+" "+processo.getName()+"\n");
+           
+//            try {;
+//                new Slack("https://hooks.slack.com/services/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")
+//                .text("A máquina "+ hal.getComputerSystem().getModel() +" está executando " + processo.getName()+"\n")
+//                .send();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+
+        stringProcessos += processo.getProcessID()+" "+processo.getName()+"\n";
+      
         }
         
+        taProcessos.setText(stringProcessos);
         
-    }//GEN-LAST:event_btnMonitorarActionPerformed
-
+        HoraLeitura();
+    }
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
+        
+        TelaDados tela = new TelaDados();
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -213,24 +247,36 @@ public class TelaDados extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaDados().setVisible(true);
+                tela.setVisible(true);
             }
         });
         
+        tela.MonitorarComponentes();
         
+        Thread thread = Thread.currentThread();
+        
+        while(true) {
+            try {
+                thread.sleep(10000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(TelaDados.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            tela.MonitorarComponentes();
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnMonitorar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jspProcessos;
     private javax.swing.JLabel lbCpu1;
     private javax.swing.JLabel lbMemoria;
+    private javax.swing.JLabel lbUltimaLeitura;
     private javax.swing.JTextArea taDisco;
     private javax.swing.JTextArea taProcessos;
     // End of variables declaration//GEN-END:variables
