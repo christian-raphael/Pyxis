@@ -48,3 +48,34 @@
     }
     
 }
+
+
+@media(min-width: 767px){
+    div.box{
+        width: 50% !important;
+        height: 62%;
+        overflow: hidden;
+    }
+    
+    div.box form.form div.container-modal{
+        flex-direction: unset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    div.box form.form div.container-modal div.form-group{
+        width: 46%;
+    }
+    
+    div.box form.form div.container-modal div.btn{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    div.box form.form div.container-modal div.btn button{
+        width: 46%;
+    }  
+}
