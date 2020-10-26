@@ -765,6 +765,10 @@ footer {
     flex-direction: column;
 }
 
+.user-action p{
+    font-size: 13px;
+}
+
 .user-information h3{
     margin-bottom: 10px;
     color: var(--text-secondary-color);
@@ -772,12 +776,12 @@ footer {
 
 .user-information p{
     margin-bottom: 25px;
-    color: var(--text-constrast-color);
+    color: var(--text-secondary-color);
 }
 
 .user-information h5{
     margin-bottom: 5px;
-    color: var(--text-constrast-color);
+    color: var(--text-secondary-color);
 }
 
 .user-group{
@@ -791,4 +795,14 @@ footer {
 
 .user-group .box{
     width: 100%;
+}
+
+/* ------------ */
+
+#comTomTicketChatWidget{
+    background: var(--main-color) !important;
+}
+
+.tomticketChat-status{
+    color: white;
 }

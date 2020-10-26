@@ -58,3 +58,10 @@ function goLogin(){
     },800);
    
 }
+
+let button = document.querySelector('.button-login');
+function entrar(event){
+    event.preventDefault();
+    window.location.href = 'dashboard-gestor/home.html';
+}
+button.addEventListener('click', entrar);
