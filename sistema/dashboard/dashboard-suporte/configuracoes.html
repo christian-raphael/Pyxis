@@ -28,7 +28,7 @@
                         <i class="fas fa-chart-pie icon first-icon"></i>
                         <a href="home.html">Home</a>
                     </li>
-                    <li class='active'>
+                    <li>
                         <i class="fas fa-desktop icon second-icon"></i>
                         <a href="monitoramento.html">Monitorar Máquinas</a>
                     </li>
@@ -36,7 +36,7 @@
                         <i class="fas fa-file icon third-icon"></i>
                         <a href="relatorios.html">Relatórios</a>
                     </li>
-                    <li>
+                    <li class='active'>
                         <i class="fas fa-cog icon fourth-icon"></i>
                         <a href="configuracoes.html">Configurações</a>
                     </li>
@@ -83,8 +83,8 @@
         <div class="container">
             <div class='menu-header'>
                 <div class='card content-area'>
-                    <h2> <span>#</span> Home</h2>
-                    <p>Acompanhe os dados gerais em tempo real</p>
+                    <h2> <span>#</span> Configurações</h2>
+                    <p>Olá Gustavo Henrque, veja suas informações :)</p>
                 </div>
 
                 <div class='card header-icons content-area'>
@@ -106,100 +106,157 @@
 
     <main>
         <section id="overview">
-            
-            <!-- FOTO DE PERFIL -->
-            <div class="card opacity card-configuracoes content-area">
-                
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Nome de usuário</p>
-                        <input id="user" class="form-input" type="text" placeholder="gustavo.henrique"/>
+            <div class="container">
+                <div class="card opacity content-area infouser-area">
+                   <div class="user-header">
+                       <div class="user-img">
+
+                       </div>
+                   </div>
+                  <div class="container-card">
+                      <div class="user-area user-btn">
+                          <button>Action</button>
+                          <button class="btn-rigth">Action</button>
+                      </div>
+                    <div class="user-area">
+                        <div class="user-action">
+                            <h3>10</h3>
+                            <p>Action</p>
+                        </div>
+                        <div class="user-action">
+                            <h3>10</h3>
+                            <p>Action</p>
+                        </div>
+                        <div class="user-action">
+                            <h3>10</h3>
+                            <p>Action</p>
+                        </div>
+                    </div>
+                    <div class="user-information">
+                        <h3>Gustavo Henrique</h3>
+                        <p>gustavo@gmail.com</p>
+
+                        <h5>Pixys Development</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="card opacity content-area user-group">
+                    <div class="box content-area">
+                        <div class="box-header">
+                            <div class="container-modal">
+                                <h3>Editar perfil</h3>
+                            </div>
+                        </div>
+                        <div class="subject">
+                            <div class="container-modal">
+                                <p>INFORMAÇÕES DE LOGIN</p>
+                            </div>
+                        </div>
+                        <form action="" class="form">
+                            <div class="container-modal">
+                                <div class="form-group">
+                                    <label class="label">Login</label>
+                                    <div class="input-area">
+                                        <i class="far fa-user icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Senha</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-eye icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="subject">
+                            <div class="container-modal">
+                                <p>INFORMAÇÕES DO CALLCENTER</p>
+                            </div>
+                        </div>
+                        <form action="" class="form">
+                            <div class="container-modal">
+                                <div class="form-group">
+                                    <label class="label">Razão Social</label>
+                                    <div class="input-area">
+                                        <i class="far fa-address-card icon" icon></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Nome fantasia</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-user-edit icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">CNPJ</label>
+                                    <div class="input-area">
+                                        <i class="far fa-id-badge icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">CEP</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-sort-amount-down icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Logradouro</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-home icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Bairro</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-road icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Número</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-sort-numeric-up-alt icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Nome do responsável</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-user icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Email do responsável</label>
+                                    <div class="input-area">
+                                        <i class="far fa-envelope icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label">Telefone</label>
+                                    <div class="input-area">
+                                        <i class="fas fa-phone icon"></i>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group btn">
+                                    <button disabled>Editar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
             </div>
-
-            <!-- INFORMAÇÕES DE USER -->
-            <div class="card opacity card-configuracoes content-area">
-                <div class='card-footer'>
-                    <p class="card-title">Informações do Usuário</p>
-                </div>
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Nome de usuário</p>
-                        <input id="user" class="form-input" type="text" placeholder="gustavo.henrique"/>
-                    </div>
-                </div>
-                
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Endereço de e-mail</p>
-                        <input id="user" class="form-input" type="text" placeholder="gustavo.henrique@gmail.com"/>
-                    </div>
-                </div>
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Primeiro nome</p>
-                        <input id="user" class="form-input" type="text" placeholder="Gustavo"/>
-                    </div>
-                </div>
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Último nome</p>
-                        <input id="user" class="form-input" type="text" placeholder="Henrique"/>
-                    </div>
-                </div>
-            </div>
-
-            <!-- INFORMAÇÕES DE CONTATO -->
-            <div class="card opacity card-configuracoes content-area">
-                <div class='card-footer'>
-                    <p class="card-title">Informações de Contato</p>
-                </div>
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Endereço</p>
-                        <input id="user" class="form-input" type="text" placeholder="Usuário"/>
-                    </div>
-                </div>
-                
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">Cidade</p>
-                        <input id="user" class="form-input" type="text" placeholder="E-mail"/>
-                    </div>
-                </div>
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">País</p>
-                        <input id="user" class="form-input" type="text" placeholder="E-mail"/>
-                    </div>
-                </div>
-                <div class='card-footer'>
-                    <div class="form-group">
-                        <p class="information">CEP</p>
-                        <input id="user" class="form-input" type="text" placeholder="E-mail"/>
-                    </div>
-                </div>
-            </div>
-
-             <!-- SOBRE MIM -->
-             <div class="card opacity card-configuracoes content-area">
-                <div class='card-footer'>
-                    <p class="card-title">Informações do Usuário</p>
-                </div>
-                <p class="information">Nome de usuário</p>
-                <p class="information">Endereço de e-mail</p>
-                <p class="information">Primeiro Nome</p>
-                <p class="information">Último Nome</p>
-                <div class='card-footer'>
-                    <p class="information">Disco: 50%</p>
-                    
-                </div>
-            </div>
-
         </section>
-        
     </main>
 
     <footer>
@@ -208,23 +265,17 @@
         </div>
     </footer>
 
-    <div class="modal-computer displayNone">
-        
-        <div class="modal-area">
-            <i class="material-icons modal-close">
-                close
-            </i>
-        </div>
-    </div>
-
-    <script src="../js/DisplayModalMonitoramento.js"></script>
-    <script src='../js/AnimationMenu.js'></script>
     <script src="../js/DisplayMenuMobile.js"></script>
+    <script src="../js/DisplayNotifications.js"></script>
+    <script src='../js/AnimationMenu.js'></script>
     <script src="../js/AnimationCards.js"></script>
+    <script src="../js/AnimationChartCard.js"></script>
     <script src="../js/Darkmode.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 </body>
+
 </html>
 <script type="text/javascript">
     // <![CDATA[
@@ -240,3 +291,4 @@
     document.body.appendChild(ttChatLoaderS);
     //]]>
     </script>
+    

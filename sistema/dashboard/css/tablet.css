@@ -46,7 +46,23 @@
     form.filter div.margin{
        margin-bottom: 32px !important;
     }
+
+    .infouser-area{
+        width: 49% !important;
+        height: 500px !important;
+        order: 3;
+    }
+
+    .user-group{
+        width: 49% !important;
+        height: auto !important;
+        order: 2;
+    }
     
+    .user-group .box{
+        width: 100% !important;
+        height: auto !important;
+    }
 }
 
 
@@ -78,4 +94,24 @@
     div.box form.form div.container-modal div.btn button{
         width: 46%;
     }  
+
+    /* ------------------------ */
+
+    .infouser-area{
+        width: 30% !important;
+        height: 500px !important;
+        order: 3;
+    }
+
+    .user-group{
+        width: 68% !important;
+        height: auto !important;
+        order: 2;
+    }
+    
+    .user-group .box{
+        width: 100% !important;
+        height: auto !important;
+    }
+    
 }
