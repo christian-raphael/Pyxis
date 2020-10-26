@@ -728,7 +728,7 @@ footer {
 }
 
 
-.user-area{
+.profile-user-area {
     width: 100%;
     height: auto;
     display: flex;
@@ -737,7 +737,7 @@ footer {
     margin-bottom: 30px;
 }
 
-.user-area button{
+.profile-user-area button{
     width: 30%;
     height: 30px;
     background: var(--main-color);
