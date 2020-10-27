@@ -398,7 +398,8 @@ div.box{
 }
 
 div.box.details {
-    height: 90%;
+    height: 95%;
+    overflow-y: scroll;
 }
 
 div.box.details form.form div.container-modal div.form-group div.input-area .icon{
@@ -407,7 +408,7 @@ div.box.details form.form div.container-modal div.form-group div.input-area .ico
 
 div.box div.box-header{
     width: 100%;
-    height: 60px;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -519,9 +520,82 @@ div.box form.form div.container-modal div.btn button{
     background: var(--text-light-color);
 }
 
+div.tabs {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2px;
+}
 
+div.box h3.tab-modal {
+    margin: 2px 0;
+    width: 100%;
+    border-radius: 5px;
+    color: rgb(170, 170, 170);
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+}
 
+div.box h3.tab-modal::before {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    transition: all .5s;
+}
 
+div.box h3.tab-modal:hover::before {
+    background: var(--main-color-dark);
+    width: 30%;
+} 
+
+div.box h3.tab-modal.current {
+    color: var(--main-color-dark);
+}
+
+div.box h3.tab-modal.current::before {
+    background: var(--main-color-dark);
+    width: 30%;
+}
+
+div.details-content,
+div.incidents-content {
+    display:block;
+    transition: all .5s;
+}
+
+div.hidden-content {
+    display: none;
+}
+
+div.area-incidents {
+    margin: 10px 0;
+    width: 100%;
+    height: 75vh;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+    padding: 2px;
+    border-radius: 5px;
+    background: var(--body-background);
+    overflow-y: auto;
+}
+
+div.incident {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 4px;
+    background: var(--background-color);
+    color: var(--text-secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
 
 /* RELATÓRIOS */
 

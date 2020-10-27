@@ -261,6 +261,10 @@
         -ms-transform: translateX(120%);
         transform: translateX(120%);
       }
+
+      div.box {
+          overflow: hidden !important;
+      }
 }
 
 

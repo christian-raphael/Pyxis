@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.com.pyxis</groupId>
-    <artifactId>calltech-api-oshi-v1</artifactId>
+    <artifactId>calltech-api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -29,7 +29,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.pyxis.telas.TelaDados</mainClass>
+                            <mainClass>br.com.pyxis.telas.TelaLogin</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>dependency-jars/</classpathPrefix>
                         </manifest>
