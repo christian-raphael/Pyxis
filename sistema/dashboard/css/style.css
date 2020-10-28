@@ -409,6 +409,7 @@ div.box.details form.form div.container-modal div.form-group div.input-area .ico
 div.box div.box-header{
     width: 100%;
     min-height: 60px;
+    padding: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -530,11 +531,11 @@ div.tabs {
 
 div.box h3.tab-modal {
     margin: 2px 0;
-    width: 100%;
+    width: 50%;
     border-radius: 5px;
     color: rgb(170, 170, 170);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     position: relative;
 }
 
