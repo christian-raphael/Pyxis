@@ -1,6 +1,8 @@
 package br.com.pyxis.telas;
 
+
 import br.com.wmixvideo.slack.Slack;
+import java.text.DecimalFormat;
 import java.time.LocalTime;
 import java.util.List;
 import java.util.logging.Level;
@@ -51,6 +53,7 @@ public class TelaDados extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        btnMaxValue = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,9 +92,8 @@ public class TelaDados extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(94, 114, 228));
 
         jLabel1.setFont(new java.awt.Font("SansSerif", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Monitoramento de Componentes");
-
-        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\Aluno\\Documents\\Pojeto-Excluir\\Pyxis\\sistema\\backend-java\\calltech-api-oshi-v1\\src\\main\\java\\resource\\logoCallTech-removebg-preview-removebg-preview.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -100,11 +102,11 @@ public class TelaDados extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(573, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(77, 77, 77))
+                .addGap(90, 90, 90))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,6 +131,14 @@ public class TelaDados extends javax.swing.JFrame {
             .addGap(0, 25, Short.MAX_VALUE)
         );
 
+        btnMaxValue.setText("Aumentar uso da memória");
+        btnMaxValue.setActionCommand("Aumentar uso de memória");
+        btnMaxValue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMaxValueActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -139,10 +149,6 @@ public class TelaDados extends javax.swing.JFrame {
                 .addGap(85, 85, 85))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(221, 221, 221))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -158,14 +164,16 @@ public class TelaDados extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addGap(18, 18, 18)
                                 .addComponent(lbMemoria, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(218, 218, 218)
-                                .addComponent(jLabel4))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addGap(26, 26, 26)
                                 .addComponent(lbUltimaLeitura, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 111, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnMaxValue, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -184,7 +192,7 @@ public class TelaDados extends javax.swing.JFrame {
                     .addComponent(lbMemoria))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(11, 11, 11)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
@@ -193,13 +201,21 @@ public class TelaDados extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(lbUltimaLeitura))
+                    .addComponent(lbUltimaLeitura)
+                    .addComponent(btnMaxValue, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    Integer i = 0;
+    Integer count = 0;
+    private void btnMaxValueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMaxValueActionPerformed
+        // TODO add your handling code here:
+        count++;
+    }//GEN-LAST:event_btnMaxValueActionPerformed
     
     public void horaLeitura() {
         LocalTime tempo = LocalTime.now();
@@ -259,26 +275,44 @@ public class TelaDados extends javax.swing.JFrame {
                                         stringDadosParticoes));
 
                 lbCpu1.setText(hal.getProcessor().getProcessorIdentifier().getName());
-
-                lbMemoria.setText(hal.getMemory().toString());
-
+                
+                // MEMÓRIA
+                
+                String stringUsoMemoria = String.valueOf((hal.getMemory().getAvailable()/1.07374)).substring(0,3);
+                Double usoMemoria = 0.0;
+                
+                String stringMemoriaTotal = String.valueOf((hal.getMemory().getTotal()/1.07374)).substring(0,3);
+                Double memoriaTotal = Double.parseDouble(stringMemoriaTotal);
+                
+                if(count>0){
+                   usoMemoria = Double.parseDouble(stringUsoMemoria) + 3.5;
+                } else {
+                   usoMemoria = Double.parseDouble(stringUsoMemoria);
+                }
+                lbMemoria.setText(String.format("Uso: %.1f Gib / %.1f Gib", usoMemoria, memoriaTotal));
+                DecimalFormat df = new DecimalFormat("#.00");
+                String porcentagemUso = df.format((usoMemoria/memoriaTotal)*100);
+                porcentagemUso = porcentagemUso.replace(",", ".");
+                System.out.println(porcentagemUso);
+                if(Double.parseDouble(porcentagemUso) > 75.00){
+                    if(i<1){
+                        i++;
+                        try {
+                        new Slack("https://hooks.slack.com/services/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")
+                            .text("A máquina " + hal.getComputerSystem().getModel() + " está com o uso da memória em " + porcentagemUso + "%.")
+                            .send();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+                
                 List<OSProcess> processos = os.getProcesses();
 
                 String stringProcessos = "";
 
                 for (OSProcess processo: processos) {
-
-
-            //            try {;
-            //                new Slack("https://hooks.slack.com/services/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")
-            //                .text("A máquina "+ hal.getComputerSystem().getModel() +" está executando " + processo.getName()+"\n")
-            //                .send();
-            //            } catch (Exception e) {
-            //                e.printStackTrace();
-            //            }
-
-                stringProcessos += processo.getProcessID()+" "+processo.getName()+"\n";
-
+                    stringProcessos += processo.getProcessID()+" "+processo.getName()+"\n";
                 }
 
                 taProcessos.setText(stringProcessos);
@@ -287,6 +321,7 @@ public class TelaDados extends javax.swing.JFrame {
             }
         }, 1000, 5000);
     }
+
     
     /**
      * @param args the command line arguments
@@ -326,6 +361,7 @@ public class TelaDados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnMaxValue;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

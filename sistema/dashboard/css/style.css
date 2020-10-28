@@ -183,6 +183,10 @@ div.menu-area ul.menu li a.current {
     color: var(--main-color);
 }
 
+div.logo-area img {
+    height: 40px;
+}
+
 /* MENU NOTIFICATIONS AREA */
 
 button.btnNotifications {

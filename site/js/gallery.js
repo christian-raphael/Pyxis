@@ -5,8 +5,8 @@ let area = document.querySelector('.area');
 
 let aux;
 let picture = [
-    'portfolio-1.jpg','portfolio-2.jpg','portfolio-3.jpg',
-    'portfolio-4.jpg','portfolio-5.jpg','portfolio-6.jpg'
+    'home-suporte1.png','relatorios-gestor2.png','graficos-gestor4.png',
+    'monitoramento-suporte3.png','detalhes-suporte5.png','configuracoes-6.png'
 ];
 
 function pictureModal(event){
