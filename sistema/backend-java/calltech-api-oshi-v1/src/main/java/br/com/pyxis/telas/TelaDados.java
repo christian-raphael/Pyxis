@@ -285,7 +285,7 @@ public class TelaDados extends javax.swing.JFrame {
                 Double memoriaTotal = Double.parseDouble(stringMemoriaTotal);
                 
                 if(count>0){
-                   usoMemoria = Double.parseDouble(stringUsoMemoria) + 3.5;
+                   usoMemoria = Double.parseDouble(stringUsoMemoria) + 3;
                 } else {
                    usoMemoria = Double.parseDouble(stringUsoMemoria);
                 }
@@ -294,11 +294,11 @@ public class TelaDados extends javax.swing.JFrame {
                 String porcentagemUso = df.format((usoMemoria/memoriaTotal)*100);
                 porcentagemUso = porcentagemUso.replace(",", ".");
                 System.out.println(porcentagemUso);
-                if(Double.parseDouble(porcentagemUso) > 75.00){
+                if(Double.parseDouble(porcentagemUso) > 50.00){
                     if(i<1){
                         i++;
                         try {
-                        new Slack("https://hooks.slack.com/services/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")
+                        new Slack("https://hooks.slack.com/services/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")
                             .text("A máquina " + hal.getComputerSystem().getModel() + " está com o uso da memória em " + porcentagemUso + "%.")
                             .send();
                         } catch (Exception e) {
