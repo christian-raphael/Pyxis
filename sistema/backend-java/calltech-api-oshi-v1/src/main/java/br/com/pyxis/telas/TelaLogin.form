@@ -58,12 +58,22 @@
                   <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" pref="381" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLabel2" min="-2" pref="392" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel7" min="-2" pref="67" max="-2" attributes="0"/>
+                      <Component id="jLabel2" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+=======
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
@@ -76,6 +86,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                       </Group>
                   </Group>
+>>>>>>> a713871d397cb34e2723106a441f33124ed5f006
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -115,7 +126,11 @@
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
+<<<<<<< HEAD
+                              <EmptySpace min="0" pref="114" max="32767" attributes="0"/>
+=======
                               <EmptySpace min="0" pref="113" max="32767" attributes="0"/>
+>>>>>>> a713871d397cb34e2723106a441f33124ed5f006
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="btnSair" min="-2" pref="350" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
@@ -194,7 +209,7 @@
                 <Property name="text" type="java.lang.String" value="Entrar"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Cursor Padr&#xe3;o"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
@@ -215,7 +230,7 @@
                 <Property name="text" type="java.lang.String" value="Sair"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Cursor Padr&#xe3;o"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
@@ -258,7 +273,11 @@
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+<<<<<<< HEAD
+              <Image iconType="2" name="C:\Users\chris\Desktop\Pyxis\sistema\backend-java\calltech-api-oshi-v1\src\main\java\resource\logoCallTech-removebg-preview (1).png"/>
+=======
               <Image iconType="2" name="C:\Users\milene.barbosa\Desktop\Pyxis\Pyxis\sistema\backend-java\calltech-api-oshi-v1\src\main\java\resource\logoCallTech-removebg-preview (1).png"/>
+>>>>>>> a713871d397cb34e2723106a441f33124ed5f006
             </Property>
           </Properties>
         </Component>

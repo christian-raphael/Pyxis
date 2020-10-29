@@ -96,7 +96,12 @@ public class TelaDados extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Monitoramento de Componentes");
 
+<<<<<<< HEAD
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\chris\\Desktop\\Pyxis\\sistema\\backend-java\\calltech-api-oshi-v1\\src\\main\\java\\resource\\logoCallTech-removebg-preview-removebg-preview.png")); // NOI18N
+        jLabel9.setText("jLabel9");
+=======
         jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\milene.barbosa\\Desktop\\Pyxis\\Pyxis\\sistema\\backend-java\\calltech-api-oshi-v1\\src\\main\\java\\resource\\logoCallTech-removebg-preview-removebg-preview.png")); // NOI18N
+>>>>>>> a713871d397cb34e2723106a441f33124ed5f006
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -106,6 +111,25 @@ public class TelaDados extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
+<<<<<<< HEAD
+                        .addComponent(jLabel8))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 115, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(56, 56, 56))
+=======
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9)))
@@ -123,6 +147,7 @@ public class TelaDados extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel8)
                 .addGap(62, 62, 62))
+>>>>>>> a713871d397cb34e2723106a441f33124ed5f006
         );
 
         jPanel2.setBackground(new java.awt.Color(94, 114, 228));
@@ -186,8 +211,13 @@ public class TelaDados extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59)
+=======
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
+>>>>>>> a713871d397cb34e2723106a441f33124ed5f006
                 .addComponent(jLabel7)
                 .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -305,7 +335,7 @@ public class TelaDados extends javax.swing.JFrame {
                     if(i<1){
                         i++;
                         try {
-                        new Slack("https://hooks.slack.com/services/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")
+                        new Slack("https://hooks.slack.com/services/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")
                             .text("A máquina " + hal.getComputerSystem().getModel() + " está com o uso da memória em " + porcentagemUso + "%.")
                             .send();
                         } catch (Exception e) {
