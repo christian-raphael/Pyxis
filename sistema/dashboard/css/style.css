@@ -183,6 +183,16 @@ div.menu-area ul.menu li a.current {
     color: var(--main-color);
 }
 
+div.logo-area {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+div.logo-area h1.logo-name {
+    margin-left: 10px;
+}
+
 div.logo-area img {
     height: 25px;
 }
@@ -879,7 +889,7 @@ footer {
 /* ------------ */
 
 #comTomTicketChatWidget{
-    background: var(--main-color) !important;
+    background: var(--main-color-dark) !important;
 }
 
 .tomticketChat-status{

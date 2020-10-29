@@ -55,6 +55,11 @@
         align-items: center;
         height: 80px;
         padding-left: 10px;
+        width: 100%;
+    }
+
+    nav.nav-menu div.container div.logo-area h1.logo-name {
+        font-size: 30px;
     }
 
     div.menu-area {
@@ -75,6 +80,10 @@
         max-width: 100%;
         width: 100%;
     }    
+
+    ul.menu div.logo-area {
+        display: none !important;
+    }
 
     ul.menu.hidden {
         margin: 0;
