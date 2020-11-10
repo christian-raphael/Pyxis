@@ -1,0 +1,185 @@
+@media(min-width: 992px) {
+    section {
+        min-height: 50vh;
+    }
+
+    div.container {
+        height: 100%;
+    }
+
+    header.cabecalho div.container button.btnMenu {
+        display: none;
+    }
+
+    header.cabecalho div.container div.menu {
+        display: block;
+        position: static;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    header.cabecalho div.container div.menu ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header.cabecalho div.container div.menu li {
+        margin: 0 0 0 10px;
+    }
+
+    div.menu li a {
+        font-size: 16px;
+        font-weight: 300;
+        display: flex;
+        justify-content: center;
+    }
+
+    div.menu li a:hover {
+        color: var(--main-color);
+    }
+
+    div.menu li a:after {
+        content: " ";        
+        height: 2px;
+        width: 0;
+        background: var(--main-color);
+        position: absolute;
+        bottom: 2px;
+        transition: width .2s;
+    }
+
+    div.menu li a:hover::after {
+        width: 70%;
+    }
+
+    section#home{
+        padding-top: 30px;
+    }
+
+    section#home div.container,
+    section#about div.container,
+    section#project div.container,
+    section#contact div.container {
+        display: flex;
+        align-items: center;
+    }
+
+    section#home  div.content-text {
+        padding-right: 50px;
+    }
+
+    section#home div.img-home img {
+        min-width: 200px;
+    }
+    section#about,
+    section#project,
+    section#contact{
+        height: 100vh;
+    }
+    section#about img {
+        width: 50%;
+    } 
+
+    section#about div.content-text {
+        padding-left: 50px;
+    }
+
+    div.service {
+        width: 30%;
+    }
+
+    section#services div.service p.service-info {
+        font-size: 14px;
+    }
+
+    section#project div.container img {
+        width: 50%;
+    }
+
+    section#project div.container div.content-text {
+        padding-left: 50px;
+    }
+
+    div.portfolio-images {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.portfolio-images div.gallery {
+        flex: 2;
+    }
+
+    div.group-row {
+        padding-left: 12px;
+        box-sizing: border-box;
+        flex-direction: column;
+        flex: 1;
+        align-items: flex-end;
+    }
+
+    div.group-row .img-gallery {
+        width: 96%;
+    }
+
+    div.members {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    section#team div.members div.member {
+        width: 49%;
+    }
+    
+    section#team div.member img {
+        min-width: 40%;
+        min-height: 100%;
+    }
+
+    section#contact div.container img {
+        width: 490px;
+    }
+
+    section#contact div.container form {
+        padding-left: 50px;
+    }
+
+    div.inputs {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section#contact div.container form input {
+        width: 48%;
+    }
+
+    section#contact div.container form textarea {
+        height: 140px;
+    }
+
+    footer#footer div.container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer#footer div.container div {
+        max-width: 30%;
+    }
+
+    footer#footer div.container div:nth-child(2) {
+       width: 15%;
+    }
+    
+    footer#footer div.social-media svg {
+        width: 25px;
+    }
+
+    .modal-area{
+        width: 332px;
+        height: fit-content;
+    }
+
+    div.card-plan{
+        width: 31%;
+    }
+}
