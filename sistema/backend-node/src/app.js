@@ -1,8 +1,21 @@
-const express = require("express");
-const app = express();
+//Carregando modulos
+    const express = require("express");
+    const bodyParser = require("body-parser");
 
-const routes = require("./routes");
+    const callcenterRoutes = require("./routes/callcenter");
 
-app.use(routes);
+    const app = express();
 
-module.exports = app;
+//Configurações
+    //Body Parser
+        app.use(bodyParser.json());
+        app.use(bodyParser.urlencoded({ extended: false }));
+
+//Rotas
+    app.use("/callcenter", callcenterRoutes);
+
+//Outros
+    const PORT = 3000;
+    app.listen(PORT, () => {
+        console.log("Servidor iniciado na porta "+PORT);
+    });
