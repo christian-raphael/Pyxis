@@ -1,58 +1,62 @@
-create database bdcalltech;
-use bdcalltech;
+CREATE TABLE plano(
+	idPlano INT PRIMARY KEY IDENTITY(1,1),
+	tipo VARCHAR(10) NOT NULL,
+	quantidadeMaquinas INT NOT NULL
+)
 
-create table tbcallcenter(
-	idcallcenter int primary key auto_increment,
-    razaosocial varchar(100),
-    nomefantasia varchar(100),
-    cnpj varchar(18),
-    logradouro varchar(50),
-    cep varchar(8),
-    bairro varchar(50),
-    numero varchar(10),
-    nomeresponsavel varchar(50),
-    emailresponsavel varchar(50),
-    telefone varchar(13)
-)auto_increment = 1;
+CREATE TABLE callcenter(
+	idCallcenter INT PRIMARY KEY IDENTITY(1,1),
+	razaoSocial VARCHAR(45) NOT NULL,
+	nomeFantasia VARCHAR(45) NOT NULL,
+	cnpj VARCHAR(8) NOT NULL, 
+	bairro VARCHAR(25) NOT NULL,
+	numero VARCHAR(12) NOT NULL,
+	nomeResponsavel VARCHAR(45) NOT NULL, 
+	emailResponsavel VARCHAR(45) NOT NULL,
+	fkPlano INT FOREIGN KEY REFERENCES plano(idPlano)
+)
 
-create table tblogin(
-	idlogin int primary key auto_increment,
-    login varchar(30),
-    senha varchar(30),
-    fkcallcenter int,
-    foreign key (fkcallcenter) references tbcallcenter (idcallcenter)
-)auto_increment = 1;
+CREATE TABLE usuario(
+	idUsuario INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(45) NOT NULL,
+	email VARCHAR(30) NOT NULL,
+	login VARCHAR(25) NOT NULL,
+	senha VARCHAR(16) NOT NULL,
+	tipo BIT NOT NULL,
+	isAdmin BIT NOT NULL,
+	chaveAtivacao VARCHAR(20) NOT NULL,
+	fkCallcenter INT FOREIGN KEY REFERENCES callcenter(idCallcenter)
+)
 
-create table tbmaquina(
-	idmaquina int primary key auto_increment,
-    nome varchar(45),
-    modelo varchar(45),
-    fabricante varchar(45),
-    setor varchar(45),
-    status varchar(45),
-    fkcallcenter int,
-    foreign key (fkcallcenter) references tbcallcenter (idcallcenter)
-)auto_increment = 1;
+CREATE TABLE setor(
+	idSetor INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(15) NOT NULL,
+	fkCallcenter INT FOREIGN KEY REFERENCES callcenter(idCallcenter)
+)
 
-create table tbcomponentes(
-	idcomponentes int primary key auto_increment,
-    cpu varchar(45),
-    memoria varchar(45),
-    disco varchar(45),
-    rede varchar(45),
-    datahora datetime,
-    fkmaquina int,
-    foreign key (fkmaquina) references tbmaquina (idmaquina)
-);
+CREATE TABLE maquina(
+	idMaquina INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(30) NOT NULL,
+	modelo VARCHAR(30) NOT NULL,
+	fabricante VARCHAR(30) NOT NULL,
+	status BIT,
+	fkSetor INT FOREIGN KEY REFERENCES setor(idSetor)
+)
 
-create table tbocorrencia(
-	idocorrencia int primary key auto_increment,
-    componente varchar(45),
-    situacao varchar(45),
-    datahorafim datetime,
-	fkmaquina int,
-    foreign key (fkmaquina) references tbmaquina (idmaquina),
-    fkcomponentes int,
-    foreign key (fkcomponentes) references tbcomponentes (idcomponentes)
-);
+CREATE TABLE leitura(
+	idLeitura INT PRIMARY KEY IDENTITY(1,1),
+	usoCpu FLOAT NOT NULL,
+	usoMemoria FLOAT NOT NULL,
+	usoDisco FLOAT NOT NULL,
+	velocidadeRede FLOAT NOT NULL,
+	dataHoraLeitura DATETIME NOT NULL,
+	fkMaquina INT FOREIGN KEY REFERENCES maquina(idMaquina)
+)
 
+CREATE TABLE ocorrencia(
+	idOcorrencia INT PRIMARY KEY IDENTITY(1,1),
+	componente VARCHAR(10) NOT NULL,
+	situacao VARCHAR(10) NOT NULL,
+	dataHoraFim DATETIME NOT NULL,
+	fkLeitura INT FOREIGN KEY REFERENCES leitura(idLeitura)
+)
