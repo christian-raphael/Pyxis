@@ -1,0 +1,102 @@
+@media(min-width: 371px){
+    .modal-area{
+        width: 332px;
+        height: fit-content;
+    }
+}
+
+@media(min-width: 575px){
+    .cabecalho .container, .container, .menu{
+        width: 80%;
+    }
+    .menu{
+        left: 10%;
+    }
+}
+
+@media(min-width: 767px){
+    .cabecalho .container, .container, menu{
+        width: 80%;
+    } 
+    .menu{
+        left: 10%;
+    }
+    .content-text h3{
+        font-size: 42px;
+        line-height: 3.5rem;
+    }
+
+    div.services-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    div.service {
+        width: 48%;
+    }
+
+    div.gallery{
+        height: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.gallery .img-gallery{
+        width: 96%;
+        height: fit-content;
+    }
+
+    .group-two .img-gallery{
+        margin-left: 4%;
+    }
+
+    .group-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .group-row .img-gallery{
+        width: 48%;
+    } 
+
+    div.member {
+        display: flex;
+        height: 180px;
+    }
+
+    div.member img {
+        max-width: 30%;
+        max-height: 190px;
+    } 
+
+    div.member-info {
+        height: 100%;
+    }
+    
+    section#project .container .specific ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    section#project .container .specific ul li .text{
+        display: flex;
+    }
+
+    .modal-area{
+        width: 332px;
+        height: fit-content;
+    }
+}
+
+@media(min-width: 767px) and  (max-width: 991px) {
+    .group-row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 45px;
+    }
+}
