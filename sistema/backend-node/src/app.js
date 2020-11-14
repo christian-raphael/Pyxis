@@ -3,6 +3,11 @@
     const bodyParser = require("body-parser");
 
     const callcenterRoutes = require("./routes/callcenter");
+    const planoRoutes = require("./routes/plano");
+    const usuarioRoutes = require("./routes/usuario");
+    const setorRoutes = require("./routes/setor");
+    const maquinaRoutes = require("./routes/maquina");
+    const ocorrenciaRoutes = require("./routes/ocorrencia");
 
     const app = express();
 
@@ -13,6 +18,11 @@
 
 //Rotas
     app.use("/callcenter", callcenterRoutes);
+    app.use("/plano", planoRoutes);
+    app.use("/usuario", usuarioRoutes);
+    app.use("/setor", setorRoutes);
+    app.use("/maquina", maquinaRoutes);
+    app.use("/ocorrencia", ocorrenciaRoutes);
 
 //Outros
     const PORT = 3000;
