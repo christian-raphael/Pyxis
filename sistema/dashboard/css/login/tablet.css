@@ -3,9 +3,11 @@
     div.container{
         height: 70%;
     }
+
     div.login-area{
         height: 100%;
         width: 50%;
+        padding: 10px 36px;
     }
 
     form h1, div.area-btn {
@@ -14,6 +16,10 @@
     
     .form-group{
         margin-bottom: 22px;
+    }
+
+    form #titlelogin{
+        margin-top: 25px;
     }
 
     div.contact-area{

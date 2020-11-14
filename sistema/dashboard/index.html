@@ -34,7 +34,7 @@
             <div class="login-area">    
                 <div class="teste animate" data-anime="modal">
                     <form action="" id="formlogin">
-                        <h1>CallTech</h1>
+                        <h1 id="titlelogin">CallTech</h1>
                         <p id="text-contact">Acesse as informações do seu call center!</p>  
 
                         <div class="form-group">
@@ -55,20 +55,22 @@
                         </div>
                         
                         <div class="footer-login">
-                            <p onclick="goAdduser()">Cadastre-se</p>
+                            <p onclick="goAdduser()">Primeiro acesso</p>
                             <p class="active">Esqueceu a senha?</p>
                         </div>
                     </form>
     
                     <form action="" class="displaynone" id="formcadastro">
-                        <h1>Cadastre-se</h1>
+                        <h1 id="titlecad">Primeiro acesso</h1>
+                        <p id="text-contact">Preencha as informações :)</p>  
+
                         <div class="form-group">
-                            <label class="form-label">Usuário</label>
+                            <label class="form-label">Chave de segurança</label>
                             <input id="addUser" class="form-input" type="text"/>
                         </div>
     
                         <div class="form-group">
-                            <label class="form-label">Email</label>
+                            <label class="form-label">Usuário</label>
                             <input id="addEmail" class="form-input" type="text"/>
                         </div>
     
