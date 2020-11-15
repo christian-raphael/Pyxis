@@ -65,6 +65,14 @@ form h1{
     color: #393939;
 }
 
+form #titlelogin{
+    margin-top: 25px;
+}
+
+form #titlecad{
+    margin-top: 0px !important;
+}
+
 form p{
     font-size: 18px;
     margin-bottom: 18px;
@@ -114,6 +122,7 @@ div.footer-login p{
     font-size: 15px !important;
     color: #646464;
     margin: 0;
+    cursor: pointer;
 }
 
 
