@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="img/logo-pyxis-icone.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="./css/hamburgers.css" rel="stylesheet">
     <link href="./css/tablet.css" rel="stylesheet">
@@ -241,7 +242,7 @@
                     </div>
                     <h3 class="plan-name value"> R$ 100 </h3>
 
-                    <button class='button'>Contratar</button>
+                    <button class='button contractButton' id="1" onclick='showRegisterModal(); getSelectedContract(this.id)'>Contratar</button>
                 </div>
 
                 <div class="service card-plan">
@@ -267,7 +268,7 @@
                     </div>
                     <h3 class="plan-name value"> R$ 400 </h3>
 
-                    <button class='button'>Contratar</button>
+                    <button class='button contractButton' id="2" onclick='showRegisterModal(); getSelectedContract(this.id)'>Contratar</button>
                 </div>
                 
                 <div class="service card-plan">
@@ -293,7 +294,7 @@
                     </div>
                     <h3 class="plan-name value"> R$ 800 </h3>
 
-                    <button class='button'>Contratar</button>
+                    <button class='button contractButton' id="3" onclick='showRegisterModal(); getSelectedContract(this.id)'>Contratar</button>
                 </div>
             </div>
         </div>
@@ -555,9 +556,30 @@
         </div>
     </div>
 
+    <!-- MODAL PARA COMPRA DE PLANO/CADASTRO DE EMPRESA -->
+    <div class="modal modal-register displaynone">
+        <div class="modal-area">
+            <div class="area-register-callcenter">
+                <i class="large material-icons" id="closeModalRegister" onclick="showRegisterModal()">close</i>
+                <div class="modal-register-form-area">
+                    <h3></h3>
+                    <div class='form'>
+                        
+                    </div>
+                </div>
+                <div class='modal-image'>
+                    <img src="img/modal-register-img.gif" alt="By stories">
+                </div>
+            </div>
+        </div> 
+    </div>
+
     <script src="js/menu.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/modalRegister.js"></script>
+    <script src="js/registerFormFields.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
 </body>
 
 </html>

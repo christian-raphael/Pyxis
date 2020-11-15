@@ -90,6 +90,37 @@
         width: 332px;
         height: fit-content;
     }
+
+    .modal-register > .modal-area {
+        width: 80%;
+    }
+
+    div.area-register-callcenter {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    div.modal-register-form-area {
+        width: 100%;
+    }
+
+    div.area-register-callcenter h3 {
+        font-size: 22px;
+    }
+
+    div.modal-register-form-area div.form {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    div.area-register-callcenter div.form div.form-group{
+        width: 48%;
+    }
+
 }
 
 @media(min-width: 767px) and  (max-width: 991px) {

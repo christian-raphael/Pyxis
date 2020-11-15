@@ -182,4 +182,28 @@
     div.card-plan{
         width: 31%;
     }
+
+    div.area-register-callcenter h2 {
+        width: 100%;
+        font-size: 24px;
+    }
+
+    div.area-register-callcenter {
+        display: flex;
+    }
+
+    div.area-register-callcenter div.modal-register-form-area,
+    div.area-register-callcenter div.modal-image {
+        flex: 1;
+    }
+
+    div.area-register-callcenter div.modal-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.area-register-callcenter div.modal-image img {
+        width: 400px;
+    }
 }
