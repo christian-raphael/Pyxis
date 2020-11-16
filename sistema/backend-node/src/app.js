@@ -1,6 +1,7 @@
 //Carregando modulos
     const express = require("express");
     const bodyParser = require("body-parser");
+    const cors = require("cors");
 
     const callcenterRoutes = require("./routes/callcenter");
     const planoRoutes = require("./routes/plano");
@@ -15,6 +16,9 @@
     //Body Parser
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({ extended: false }));
+
+    //CORS
+        app.use(cors());
 
 //Rotas
     app.use("/callcenter", callcenterRoutes);

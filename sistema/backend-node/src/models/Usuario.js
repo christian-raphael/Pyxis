@@ -19,7 +19,7 @@ const Usuario = db.sequelize.define("usuario", {
         type: db.Sequelize.STRING,
     },
     tipo: {
-        type: db.Sequelize.BOOLEAN,
+        type: db.Sequelize.INTEGER,
     },
     isAdmin: {
         type: db.Sequelize.BOOLEAN,
