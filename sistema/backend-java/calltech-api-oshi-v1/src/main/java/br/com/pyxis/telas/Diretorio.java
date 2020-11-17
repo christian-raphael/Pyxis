@@ -27,7 +27,7 @@ public class Diretorio {
         
         //Inicializando a váriavel diretorio criando a instancia  da classe File 
         // e passando nome da pasta que queremos encontrar pasta 
-        File diretorio = new File("C:\\Securit");
+        File diretorio = new File("C:\\Pyxis");
         
         //Se essa pasta não existe é criada
         if (!diretorio.exists()) {
