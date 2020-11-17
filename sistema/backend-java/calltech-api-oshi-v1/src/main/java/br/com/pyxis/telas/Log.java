@@ -14,7 +14,7 @@ public class Log {
     
     
     public static void firstLog(String nomeSistema) {
-        ArquivoLog logFile = new ArquivoLog("Securit"); 
+        ArquivoLog logFile = new ArquivoLog("Pyxis"); 
         String arquivoLogCaminho;
     
         Diretorio.criarDiretorio();
@@ -29,7 +29,7 @@ public class Log {
     }
     
     public static void fileLogs(String tipoErro, String erro) {
-        ArquivoLog logFile = new ArquivoLog("Securit"); 
+        ArquivoLog logFile = new ArquivoLog("Pyxis"); 
         String arquivoLogCaminho;
     
         Diretorio.criarDiretorio();
