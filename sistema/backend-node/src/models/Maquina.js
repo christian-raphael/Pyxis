@@ -15,6 +15,9 @@ const Maquina = db.sequelize.define("maquina", {
     fabricante: {
         type: db.Sequelize.STRING,
     },
+    numeroSerie: {
+        type: db.Sequelize.STRING,
+    },
     status: {
         type: db.Sequelize.BOOLEAN,
     },

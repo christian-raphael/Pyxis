@@ -386,7 +386,7 @@
 
     <!-- MODAL DE CADASTRO -->
     <div class="modal-computer modalAdd displayNone">
-        <div class="box content-area">
+        <div class="box content-area area-modal">
             <div class="box-header">
                 <div class="container-modal">
                     <h3>Cadastrar máquina</h3>
@@ -400,45 +400,53 @@
                     <p>INFORMAÇÕES NECESSÁRIAS</p>
                 </div>
             </div>
-            <form action="" class="form">
+            <form action="" method="POST" class="form">
                 <div class="container-modal">
                     <div class="form-group">
                         <label class="label">Nome</label>
                         <div class="input-area">
                             <i class="fas fa-desktop icon"></i>
-                            <input type="text">
+                            <input type="text" id="nomeMaquina">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="label">Modelo</label>
                         <div class="input-area">
                             <i class="fas fa-microchip icon"></i>
-                            <input type="text">
+                            <input type="text" id="modeloMaquina">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="label">Fabricante</label>
                         <div class="input-area">
                             <i class="fas fa-laptop-code icon"></i>
-                            <input type="text">
+                            <input type="text" id="fabricanteMaquina">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="label">Setor</label>
                         <div class="input-area">
                             <i class="fas fa-tag icon"></i>
-                            <input type="text">
+                            <input type="text" id="setorMaquina">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="label">Numero de série</label>
+                        <div class="input-area">
+                            <i class="fas fa-tag icon"></i>
+                            <input type="text" id="numeroSerierMaquina">
                         </div>
                     </div>
                     <div class="form-group btn">
-                        <button class="clean">Limpar tudo</button>
-                        <button>Cadastrar</button>
+                        <input type="submit" class="button clean" value="Limpar tudo">
+                        <input type="submit" class="button" id="cadastrarMaquina" value="Cadastrar">
                     </div>
                 </div>
             </form>
         </div>
     </div>
 
+    <script src="../js/services/maquina.js"></script>
     <script src="../js/ChangeTabModal.js"></script>
     <script src="../js/DisplayModalMonitoramento.js"></script>
     <script src='../js/AnimationMenu.js'></script>

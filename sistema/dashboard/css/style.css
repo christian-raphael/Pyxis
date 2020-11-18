@@ -392,7 +392,6 @@ span.modal-close {
     z-index: 100;
 }
 
-
 .modal-close svg.icon {
     color: #F85353 !important;
 }
@@ -511,7 +510,7 @@ div.box form.form div.container-modal div.form-group input:focus{
     border: 2px solid var(--main-color-dark);
 }
 
-div.box form.form div.container-modal div.form-group button{
+div.box form.form div.container-modal div.form-group .button{
     background: var(--main-color);
     color: white;
     border: 0;
@@ -611,6 +610,10 @@ div.incident {
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+}
+
+.area-modal{
+    height: auto !important;
 }
 
 /* RELATÓRIOS */

@@ -83,6 +83,7 @@
     div.box form.form div.container-modal div.form-group{
         width: 46%;
     }
+
     
     div.box form.form div.container-modal div.btn{
         width: 100%;
@@ -90,8 +91,9 @@
         justify-content: space-between;
         align-items: center;
     }
+
     
-    div.box form.form div.container-modal div.btn button{
+    div.box form.form div.container-modal div.btn .button{
         width: 46%;
     }  
 

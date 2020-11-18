@@ -2,15 +2,18 @@ let url = "http://localhost:3000/maquina";
 
 // CADASTRAR 
 
-function create() {
+function create(e) {
+    e.preventDefault();
+
     let ajax = new XMLHttpRequest();
 
     let params = {
-        nome: "Computador Intel 456456G",
-        modelo: "Pentium",
-        fabricante: "Intel",
-        status: "Ativa",
-        fkSetor: 1
+        nome: nomeMaquina.value,
+        modelo: modeloMaquina.value,
+        fabricante: fabricanteMaquina.value,
+        numeroSerie: "45456456",
+        status: "1",
+        fkSetor: 2
     };
 
     ajax.open("POST", `${url}/cadastrar`);
@@ -23,6 +26,9 @@ function create() {
 
     ajax.send(JSON.stringify(params));
 }
+
+let btnCadastro = document.querySelector('#cadastrarMaquina');
+btnCadastro.addEventListener('click', create);
 
 // LISTAR TODOS
 

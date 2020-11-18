@@ -14,6 +14,7 @@ router.post("/cadastrar", (request, response) => {
             nome: request.body.nome,
             modelo: request.body.modelo,
             fabricante: request.body.fabricante,
+            numeroSerie: request.body.numeroSerie,
             status: request.body.status,
             fkSetor: request.body.fkSetor,
         })
@@ -31,6 +32,7 @@ router.put("/atualizar/:id", (request, response) => {
             nome: request.body.nome,
             modelo: request.body.modelo,
             fabricante: request.body.fabricante,
+            numeroSerie: request.body.numeroSerie,
             status: request.body.status,
             fkSetor: request.body.fkSetor,
             },
