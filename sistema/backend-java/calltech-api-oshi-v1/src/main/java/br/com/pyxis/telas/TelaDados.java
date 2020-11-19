@@ -3,10 +3,7 @@ package br.com.pyxis.telas;
 
 import br.com.wmixvideo.slack.Slack;
 import java.text.DecimalFormat;
-import java.time.LocalTime;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import oshi.SystemInfo;
 import oshi.hardware.HWDiskStore;
 import oshi.hardware.HWPartition;
@@ -18,7 +15,7 @@ import java.time.LocalTime;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TelaDados extends javax.swing.JFrame {   
+public final class TelaDados extends javax.swing.JFrame {   
     /**
      * Creates new form TelaDados
      */

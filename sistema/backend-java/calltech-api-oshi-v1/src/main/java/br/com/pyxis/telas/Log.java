@@ -8,18 +8,16 @@ package br.com.pyxis.telas;
 
 import java.io.FileNotFoundException;
 import java.util.logging.Level;
-import br.com.pyxis.telas.TelaDados;
-
 public class Log {
-    
-    
-    public static void firstLog(String nomeSistema) {
-        ArquivoLog logFile = new ArquivoLog("Pyxis"); 
+    public static void main(String[] args) {
+        //public static void firstLog(String nomeSistema) {
+        ArquivoLog logFile = new ArquivoLog("C:\\Users\\milene.barbosa\\Desktop\\Pyxis\\Pyxis"); 
         String arquivoLogCaminho;
     
         Diretorio.criarDiretorio();
         try {
             logFile.criarArquivo();
+            Object[] nomeSistema = null;
             logFile.escreverArquivo(
                     String.format("Servidor do sistema %s iniciado.", nomeSistema)
             );
@@ -32,7 +30,7 @@ public class Log {
         ArquivoLog logFile = new ArquivoLog("Pyxis"); 
         String arquivoLogCaminho;
     
-        Diretorio.criarDiretorio();
+            Diretorio.criarDiretorio();
         try {
             logFile.criarArquivo();
             logFile.escreverArquivo(
@@ -42,5 +40,6 @@ public class Log {
         }
     }
 }
+
     
 

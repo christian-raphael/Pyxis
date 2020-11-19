@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.com.pyxis.telas;
 
 
@@ -22,14 +18,12 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 
 
 public class ArquivoLog {
 
-    private File arquivo;
+    private final File arquivo;
     private Date data;
     private FileWriter escrever;
     private BufferedWriter marcar;
@@ -78,17 +72,22 @@ public class ArquivoLog {
 
     }
 
+    /**
+     *
+     * @param arquivo
+     * @throws FileNotFoundException
+     */
     public void lerArquivos(File arquivo) throws FileNotFoundException {
 
-        FileReader leitura;
+        FileReader leiFileReader;
 
         String linha;
 
         BufferedReader ler;
 
-        leitura = new FileReader(arquivo);
+        leiFileReader = new FileReader(arquivo);
 
-        ler = new BufferedReader(leitura);
+        ler = new BufferedReader(leiFileReader);
 
         try {
 
